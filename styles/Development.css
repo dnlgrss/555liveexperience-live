@@ -1,0 +1,140 @@
+/* Animation  */
+@keyframes flashing {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    55% {
+        opacity: 0;
+    }
+
+    65% {
+        opacity: 0;
+    }
+}
+
+body {
+    background-color: var(--yellow-bg);
+    overflow: hidden;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.maintenance-section {
+    /* height: 100vh; */
+    height: 100dvh;
+    display: grid;
+    place-content: center center;
+}
+
+.maintenance-section2 {
+    height: 100dvh;
+    display: grid;
+    place-content: center center;
+}
+
+.credits-section {
+    position: absolute;
+    /* Positioned at the bottom of the page */
+    bottom: 1rem;
+    left: 1.2rem;
+    display: flex;
+}
+
+.credits-section span {
+    margin-left: 0.5rem;
+    text-decoration: none;
+}
+
+.credits-section p {
+    margin-left: 0.5rem;
+    text-decoration: none;
+}
+
+.credits-section-development p {
+    font-size: 14px;
+    margin: 0 0 0 0.5rem;
+}
+
+.flashing-text {
+    animation: flashing 1s linear infinite;
+    font-weight: 400;
+    /* font-size: 4rem; */
+}
+
+/* Version 2.0  */
+.white-rec {
+    background-color: white;
+    padding: 0.5rem 2rem;
+}
+
+.white-rec h1 {
+    font-size: 4rem;
+}
+
+.rec1,
+.rec2,
+.rec4,
+.rec5 {
+    opacity: 0.4;
+    text-transform: none;
+    color: white;
+}
+
+.rec1 {
+    /* transform-origin: top left; */
+    transform: rotate(60deg) translateX(-2px) translateY(-208px);
+}
+
+.rec2 {
+    transform-origin: bottom right;
+    transform: rotate(30deg);
+}
+
+.rec4 {
+    transform-origin: top right;
+    transform: rotate(-30deg);
+}
+
+.rec5 {
+    transform: rotate(-60deg) translateX(-2px) translateY(+208px);
+}
+
+@media only screen and (min-width: 480px) {
+    body {
+        background-color: var(--black-bg);
+        color: white;
+    }
+
+    /* Version 2.0  */
+    /* .white-rec {
+        background-color: var(--yellow-bg);
+    } */
+
+    .rec3 {
+        color: var(--black-bg);
+        background-color: var(--yellow-bg);
+    }
+
+    .rec1,
+    .rec2,
+    .rec4,
+    .rec5 {
+        opacity: 0.2;
+    }
+
+    .maintenance-section2 {
+        /* transform: translateX(30vw); */
+        /* position: absolute;
+        right: 0; */
+        display: grid;
+        justify-content: end;
+        margin-right: 140px;
+    }
+}

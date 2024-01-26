@@ -1,0 +1,28 @@
+.contact-area p,
+.contact-area a,
+.address-area p,
+.social-area a {
+    margin: 0 16px;
+    font-size: 18px;
+}
+
+.contact-area a,
+.address-area .grey,
+.social-area .social {
+    opacity: 0.6;
+}
+
+.contact-area,
+.address-area {
+    margin-bottom: 36px;
+}
+
+.social-area {
+    margin-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-area p {
+    margin-bottom: 0;
+}

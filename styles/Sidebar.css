@@ -1,0 +1,79 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    /* Start off the screen */
+    right: -75%;
+    width: 75%;
+    height: 100%;
+    /* Or any color you prefer */
+    background-color: #da2020;
+    transition: right 0.3s ease;
+    z-index: 998;
+}
+
+.sidebar.open {
+    /* Bring onto the screen */
+    right: 0;
+}
+
+.sidebar .menu {
+    margin-left: 20px;
+    margin-top: 100px;
+}
+
+.menu-item {
+    display: block;
+    /* Font items */
+    font-size: 60px;
+    font-weight: 200;
+    /* Space between items */
+    margin-bottom: 10px;
+    /* White line under each item */
+    border-bottom: 2px solid white;
+    /* Padding for the bottom border */
+    padding-bottom: 20px;
+    /* Adjust the color as needed */
+    color: #000;
+    /* Removes underline from links */
+    text-decoration: none;
+}
+
+.menu-item:active {
+    color: #ffffff;
+}
+
+.no-line {
+    /* No white line under this item */
+    border-bottom: 0px solid white;
+}
+
+.social-media {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.social-media p {
+    margin: 0;
+}
+
+.social-link {
+    display: block;
+    /* Adjust the color as needed */
+    color: #00000081;
+    /* Removes underline from links */
+    text-decoration: none;
+    /* Space between social media links */
+    margin-bottom: 5px;
+}
+
+.follow-us {
+    margin-bottom: 5px;
+    /* Adjust the color as needed */
+    color: #000;
+}
+
+.social-link,
+.follow-us {
+    font-size: 18px;
+}

@@ -1,0 +1,14 @@
+.network-h1 {
+    font-size: 65px;
+    font-weight: 400;
+    margin: 16px;
+}
+
+.network-quote p {
+    font-size: 62px;
+    line-height: 55px;
+}
+
+.network-quote {
+    margin-bottom: 120px;
+}

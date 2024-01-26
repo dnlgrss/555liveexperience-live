@@ -1,0 +1,15 @@
+.credits-area {
+    margin: 16px 0 10px 0;
+    display: flex;
+}
+
+.credits-area span {
+    margin-left: 0.5rem;
+    text-decoration: none;
+}
+
+.credits-area p {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    font-size: 14px;
+}

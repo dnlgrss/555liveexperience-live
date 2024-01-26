@@ -1,0 +1,23 @@
+.selected-clients {
+    margin-bottom: 120px;
+}
+
+.works-list {
+    display: grid;
+    place-content: center center;
+    margin-bottom: 46px;
+}
+
+.work-box {
+    width: 90dvw;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.work-box img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    border: 1px black solid;
+}

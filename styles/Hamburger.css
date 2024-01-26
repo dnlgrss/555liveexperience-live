@@ -1,0 +1,31 @@
+.hamburger-menu {
+    width: 40px;
+    /* Adjust the width as needed */
+    height: 45px;
+    /* Adjust the height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 999;
+}
+
+.hamburger-menu .line {
+    width: 100%;
+    /* Adjust thickness of the lines */
+    height: 6px;
+    /* Adjust color as needed */
+    background-color: #333;
+    /* Smooth transition for animations */
+    transition: all 0.3s ease;
+}
+
+/* Optional: Add hover effect */
+.hamburger-menu:hover .line {
+    /* Change color on hover */
+    background-color: #333;
+}
+
+.hamburger-menu .line.hidden {
+    display: none;
+}

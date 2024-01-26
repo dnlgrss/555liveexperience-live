@@ -1,0 +1,9 @@
+.header {
+    display: flex;
+    /* Aligns children to the sides */
+    justify-content: space-between;
+    /* Aligns children vertically in the center */
+    align-items: center;
+    /* Add some padding around the header */
+    padding: 10px;
+}
