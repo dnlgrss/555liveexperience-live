@@ -9,9 +9,11 @@
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  max-width: 100dvw;
+  /* overflow-x: hidden; */
   font-size: 14px;
+  background-color: white;
+  /* overflow: hidden; */
 }
 
 a {
@@ -21,4 +23,46 @@ a {
 
 p {
   margin: 16px;
+}
+
+/* Loader config */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Full width of the container */
+  width: 100%;
+  /* Full height of the container */
+  height: 100%;
+  overflow: hidden;
+}
+
+.loader img {
+  /* Adjust the duration and timing function as needed */
+  animation: spin 2s linear infinite;
+  background-color: transparent;
+  width: 50px;
+}
+
+.vp-center div {
+  margin: 0;
+}
+
+
+@media only screen and (min-width: 480px) {
+  body {
+    background-color: var(--black-bg);
+    color: white;
+    overflow-x: hidden;
+  }
 }

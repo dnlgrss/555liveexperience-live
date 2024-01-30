@@ -1,8 +1,3 @@
-/* body {
-    background-color: #ffffff;
-    overflow: hidden;
-}
-*/
 .frontpage {
     height: 100dvh;
 }
@@ -32,19 +27,41 @@
 }
 
 .circle-quote {
-    width: 100vw;
-    height: 40vh;
+    width: 100dvw;
+    height: 40dvh;
     display: grid;
     place-content: center center;
 }
 
 
 
-/*
+
 @media only screen and (min-width: 480px) {
-    body {
-        background-color: var(--black-bg);
-        color: white;
+    .circle-quote {
+        display: flex;
+        justify-content: end;
+        height: auto;
+    }
+
+    .circle-quote img {
+        width: 120px;
+        margin-right: 50px;
+    }
+
+    .frontpage {
+        width: 100dvw;
+        height: 100dvh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .frontpage .container {
+        width: 90%;
+    }
+
+    .frontpage .container p {
+        font-size: 5rem;
+        line-height: 4rem;
     }
 }
-*/

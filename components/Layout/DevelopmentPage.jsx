@@ -8,9 +8,12 @@ import LogoWhite from '@/public/assets/img/logo-white-yellow.png';
 
 const DevelopmentPage = () => {
     // State to store screen width
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+    const [screenWidth, setScreenWidth] = useState(null);
 
     useEffect(() => {
+        // Set initial value
+        setScreenWidth(window.innerWidth);
+
         // Handler to call on window resize
         const handleResize = () => {
             setScreenWidth(window.innerWidth);

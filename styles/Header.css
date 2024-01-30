@@ -1,4 +1,13 @@
 .header {
+    /* For Safari */
+    position: -webkit-sticky;
+    position: sticky;
+    /* Set the top edge of the header to stick at the top of the viewport */
+    top: 0;
+    /* Ensure the header is above other content */
+    z-index: 998;
+    background: #FFF;
+    /* Consider adding a background color if your header is not opaque */
     display: flex;
     /* Aligns children to the sides */
     justify-content: space-between;
@@ -6,4 +15,38 @@
     align-items: center;
     /* Add some padding around the header */
     padding: 10px;
+}
+
+.logo {
+    z-index: 998;
+}
+
+/* Style the sidebar overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Black background with 60% opacity */
+    background: rgba(0, 0, 0, 0.6);
+    /* Ensure it's below the sidebar but above other content */
+    z-index: 997;
+}
+
+.no-scroll {
+    overflow: hidden !important;
+    height: 100%;
+}
+
+.overlay.active {
+    display: block;
+}
+
+@media only screen and (min-width: 480px) {
+    .header {
+        /* Set the header background to black */
+        background-color: black;
+    }
 }

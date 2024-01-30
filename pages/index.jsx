@@ -15,9 +15,8 @@ import { gql } from '@apollo/client';
 // Parser
 import parse from 'html-react-parser';
 import Credits from '@/components/Layout/Credits';
+import VimeoVideo from '@/components/UI/VimeoVideo';
 
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const getStaticProps = async () => {
   // Fetching SEO page
@@ -65,21 +64,31 @@ export default function Home({ data }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+
+
   return (
     <>
       <Head>{fullHead}</Head>
       <Header />
       <div className='frontpage'>
-        <p className='quote' style={{ marginBottom: '56px' }}>“If everything seems under control, you’re not going fast enough.”</p>
-        <p className='quote'>- M. Andretti</p>
+        <div className="container">
+          <p className='quote' style={{ fontFamily: "'Marchellia', sans-serif", marginBottom: '56px' }}>“If everything seems under control, you’re not going fast enough.”</p>
+          <p className='quote'>- M. Andretti</p>
+        </div>
         {showScrollDown && (
           <div className="scroll-down-link" onClick={scrollDown}>
             <p>Scroll Down</p>
           </div>
         )}
       </div>
+      <div className="vimeo-video" style={{ width: '100dvw', height: '100dvh' }}>
+        <VimeoVideo
+          verticalVideoUrl="https://player.vimeo.com/video/108883988"
+          horizontalVideoUrl="https://player.vimeo.com/video/260272259"
+        />
+      </div>
       <div className="circle-quote">
-        <Image src={CircleQuote} style={{ backgroundColor: 'black' }} />
+        <Image src={CircleQuote} />
       </div>
       <Credits />
     </>

@@ -73,7 +73,7 @@ export default function ourNetwork({ data }) {
       <h1 className='network-h1'>Our Network</h1>
       <p>Join us in creating shared moments across global fan bases, turning every event into a timeless phenomenon.</p>
       <div className="network-quote">
-        <p>We are always looking for talented <br /> <span className={`animated-word ${animation}`}>{currentWord}</span> <br /> from all over the world.</p>
+        <p>We are always looking for talented <br /> <span style={{ fontFamily: "'Marchellia', sans-serif" }} className={`animated-word ${animation}`}>{currentWord}</span> <br /> from all over the world.</p>
       </div>
       <Credits />
     </>

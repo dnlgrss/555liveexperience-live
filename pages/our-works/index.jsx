@@ -1,5 +1,6 @@
 //React
 import React from 'react';
+import { Suspense } from 'react'
 //Nextjs
 import Head from 'next/head';
 import Image from 'next/image'
@@ -16,6 +17,7 @@ import Header from '@/components/Layout/Header';
 import Credits from '@/components/Layout/Credits';
 
 import LogoDesktop from '@/public/assets/img/logo-white-yellow.png'
+import Loader from '@/components/UI/Loader';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -74,7 +76,9 @@ export default function ourWorks({ data }) {
             <div className="works-list">
                 {
                     events.map((single) =>
-                        <Work single={single} slug={data.page.slug} key={single.id} />
+                        <Suspense fallback={<Loader />}>
+                            <Work single={single} slug={data.page.slug} key={single.id} />
+                        </Suspense>
                     )
                 }
             </div>
@@ -82,8 +86,9 @@ export default function ourWorks({ data }) {
                 <p>Selected Clients</p>
                 {
                     selectedClients.map((single, i) =>
-                        <Image src={single} alt='555 Live Experience Logo' style={{ width: '100px', height: 'auto' }} key={i} />
-
+                        <Suspense fallback={<Loader />}>
+                            <Image src={single} alt='555 Live Experience Logo' style={{ width: '100px', height: 'auto' }} key={i} />
+                        </Suspense>
                     )
                 }
             </div>

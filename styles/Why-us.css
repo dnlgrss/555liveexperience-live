@@ -69,3 +69,19 @@ p {
 .main-text {
     font-size: 20px;
 } */
+
+@media only screen and (min-width: 480px) {
+    .animated-line {
+        margin-top: 100px;
+    }
+
+    .why-us-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .subheaders {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

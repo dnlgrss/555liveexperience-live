@@ -29,3 +29,11 @@
 .hamburger-menu .line.hidden {
     display: none;
 }
+
+
+@media only screen and (min-width: 480px) {
+    .hamburger-menu {
+        /* Use !important to override inline styles if necessary */
+        display: none !important;
+    }
+}

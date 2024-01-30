@@ -1,0 +1,31 @@
+.desktop-menu {
+    /* Hide by default */
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+}
+
+.desktop-menu-item {
+    /* or inline-block, depending on your design */
+    display: block;
+    /* Adjust spacing between menu items */
+    margin: 0 10px;
+    /* Set text color */
+    color: #FFF;
+    text-decoration: none;
+}
+
+.desktop-menu-item:hover {
+    color: var(--yellow-bg);
+}
+
+@media (min-width: 481px) {
+    .desktop-menu {
+        /* Show the menu as a flex container on larger screens */
+        display: flex;
+        /* Center items vertically */
+        align-items: center;
+    }
+}

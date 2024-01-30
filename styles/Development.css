@@ -15,7 +15,7 @@
     }
 }
 
-body {
+.development-page {
     background-color: var(--yellow-bg);
     overflow: hidden;
 }
@@ -107,7 +107,8 @@ body {
 }
 
 @media only screen and (min-width: 480px) {
-    body {
+
+    .development-page {
         background-color: var(--black-bg);
         color: white;
     }

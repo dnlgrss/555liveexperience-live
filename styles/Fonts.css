@@ -1,0 +1,8 @@
+@font-face {
+    /* Use a custom name to reference your font */
+    font-family: 'Marchellia';
+    /* URL relative to the public directory */
+    src: url('/fonts/Marchellia.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
