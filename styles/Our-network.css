@@ -12,3 +12,23 @@
 .network-quote {
     margin-bottom: 120px;
 }
+
+@media only screen and (min-width: 480px) {
+
+    .network-page {
+        display: flex;
+        flex-direction: column;
+        /* This will push the credits to the bottom */
+        justify-content: space-between;
+        min-height: 100dvh;
+    }
+
+    .network-quote p {
+        font-size: 76px;
+        line-height: 70px;
+    }
+
+    .network-h1 {
+        margin-top: 100px;
+    }
+}

@@ -49,28 +49,36 @@ export default function contacts({ data }) {
     <>
       <Head>{fullHead}</Head>
       <Header />
-      <h1 className='network-h1'>Get in Touch</h1>
-      <p>For new inquiries contact</p>
-      <div className="contact-area">
-        <p className="name">Marc van Sintruyen</p>
-        <a href="mailto: marc.vansintruyen@555liveexperience.com" className="email">marc.vansintruyen@555liveexperience.com</a>
-        <p className="name">Alexandre Molina</p>
-        <a href="mailto: alex.molina@555liveexperience.com" className="email">alex.molina@555liveexperience.com</a>
+      <div className="contact-section">
+        <h1 className='network-h1'>Get in touch</h1>
+        <div className="contact-grid">
+          <div>
+            <p className='enquiries'>For new inquiries contact</p>
+            <div className="contact-area">
+              <p className="name">Marc van Sintruyen</p>
+              <a href="mailto: marc.vansintruyen@555liveexperience.com" className="email">marc.vansintruyen@555liveexperience.com</a>
+              <p className="name">Alexandre Molina</p>
+              <a href="mailto: alex.molina@555liveexperience.com" className="email">alex.molina@555liveexperience.com</a>
+            </div>
+          </div>
+          <div>
+            <div className="address-area">
+              <p>Find us in Dubai | Riyadh | Brussels</p>
+              <p className="grey">No. 06.01</p>
+              <p className="grey">The Offices 2 At One Central</p>
+              <p className="grey">Dubai</p>
+              <p className="grey">United Arab Emirates</p>
+            </div>
+            <div className="social-area">
+              <p>Follow us</p>
+              <a href="https://www.linkedin.com/company/555-live-events/" className="social">Linkedin</a>
+              <a href="https://www.instagram.com/555.live/" className="social">Instagram</a>
+              <a href="#" className="social">Vimeo</a>
+            </div>
+          </div>
+        </div>
+        <Credits />
       </div>
-      <div className="address-area">
-        <p>Find us in Dubai | Riyadh | Brussels</p>
-        <p className="grey">No. 06.01</p>
-        <p className="grey">The Offices 2 At One Central</p>
-        <p className="grey">Dubai</p>
-        <p className="grey">United Arab Emirates</p>
-      </div>
-      <div className="social-area">
-        <p>Follow us</p>
-        <a href="https://www.linkedin.com/company/555-live-events/" className="social">Linkedin</a>
-        <a href="https://www.instagram.com/555.live/" className="social">Instagram</a>
-        <a href="#" className="social">Vimeo</a>
-      </div>
-      <Credits />
     </>
   )
 }

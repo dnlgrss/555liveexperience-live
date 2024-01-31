@@ -3,6 +3,7 @@
 }
 
 .works-list {
+    width: 100dvw;
     display: grid;
     place-content: center center;
     margin-bottom: 46px;
@@ -20,4 +21,41 @@
     width: 100%;
     height: auto;
     border: 1px black solid;
+}
+
+@media only screen and (min-width: 480px) {
+    .works-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-content: center center;
+    }
+
+    .work-box {
+        width: auto;
+        padding: 16px;
+        margin-bottom: 0;
+    }
+
+    .selected-clients p {
+        font-size: 36px;
+    }
+
+    .selected-clients-logos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        place-content: center center;
+    }
+
+    .selected-clients-logos-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+    /* .selected-clients-logos-image img {
+        width: 100%;
+        height: auto;
+    } */
 }

@@ -75,13 +75,40 @@ p {
         margin-top: 100px;
     }
 
+    .animated-line p {
+        font-size: 500%;
+        line-height: 70px;
+    }
+
     .why-us-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        /* Adjust the gap as needed */
+        gap: 20px;
     }
 
-    .subheaders {
+    .main-text {
+        margin: 0;
+        width: 70%;
+    }
+
+    .intro p {
+        font-size: 46px;
+        width: 80%;
+        line-height: 45px;
+    }
+
+    .subheaders>div {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        /* Stack subheader and paragraphs vertically */
+        grid-template-columns: 50% 50%;
+    }
+
+    .subheader {
+        opacity: 0.7;
+        font-weight: 400;
+        justify-self: end;
+        margin-top: 16px;
+        margin-right: 200px;
     }
 }

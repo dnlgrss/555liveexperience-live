@@ -84,13 +84,17 @@ export default function ourWorks({ data }) {
             </div>
             <div className="selected-clients">
                 <p>Selected Clients</p>
-                {
-                    selectedClients.map((single, i) =>
-                        <Suspense fallback={<Loader />}>
-                            <Image src={single} alt='555 Live Experience Logo' style={{ width: '100px', height: 'auto' }} key={i} />
-                        </Suspense>
-                    )
-                }
+                <div className="selected-clients-logos">
+                    {
+                        selectedClients.map((single, i) =>
+                            <Suspense fallback={<Loader />}>
+                                <div className='selected-clients-logos-image'>
+                                    <Image src={single} alt='555 Live Experience Logo' style={{ width: '100px', height: 'auto' }} key={i} />
+                                </div>
+                            </Suspense>
+                        )
+                    }
+                </div>
             </div>
             <Credits />
         </>

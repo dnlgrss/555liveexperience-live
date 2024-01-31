@@ -49,6 +49,24 @@ export default function ourNetwork({ data }) {
   const words = ["EVENT EXPERTS", "TECHNICIANS", "PROFESSIONALS", "FREELANCERS", "CREATIVES"];
   const [currentWord, setCurrentWord] = useState(words[0]);
   const [animation, setAnimation] = useState(0);
+  // State to store screen width
+  const [screenWidth, setScreenWidth] = useState(null);
+
+  useEffect(() => {
+    // Set initial value
+    setScreenWidth(window.innerWidth);
+
+    // Handler to call on window resize
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []); // Empty array ensures that effect runs only on mount and unmount
 
   useEffect(() => {
     let index = 0;
@@ -70,12 +88,19 @@ export default function ourNetwork({ data }) {
     <>
       <Head>{fullHead}</Head>
       <Header />
-      <h1 className='network-h1'>Our Network</h1>
-      <p>Join us in creating shared moments across global fan bases, turning every event into a timeless phenomenon.</p>
-      <div className="network-quote">
-        <p>We are always looking for talented <br /> <span style={{ fontFamily: "'Marchellia', sans-serif" }} className={`animated-word ${animation}`}>{currentWord}</span> <br /> from all over the world.</p>
+      <div className="network-page">
+        <div>
+          <h1 className='network-h1'>Our Network</h1>
+          <p>Join us in creating shared moments across global fan bases, turning every event into a timeless phenomenon.</p>
+          <div className="network-quote">
+            {screenWidth < 480 ?
+              <p>We are always looking for talented <br /> <span style={{ fontFamily: "'Marchellia', sans-serif" }} className={`animated-word ${animation}`}>{currentWord}</span> <br /> from all over the world.</p>
+              : <p>We are always looking for talented <span style={{ fontFamily: "'Marchellia', sans-serif" }} className={`animated-word ${animation}`}>{currentWord}</span> <br /> from all over the world.</p>
+            }
+          </div>
+        </div>
+        <Credits />
       </div>
-      <Credits />
     </>
   )
 }

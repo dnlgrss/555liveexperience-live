@@ -26,3 +26,30 @@
 .social-area p {
     margin-bottom: 0;
 }
+
+@media only screen and (min-width: 480px) {
+    .contact-section {
+        display: flex;
+        flex-direction: column;
+        /* This will push the credits to the bottom */
+        justify-content: space-between;
+        min-height: 100dvh;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-content: center center;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .contact-grid>div:nth-child(2) {
+        justify-self: end;
+    }
+
+    .enquiries {
+        margin-top: 0;
+    }
+
+}
