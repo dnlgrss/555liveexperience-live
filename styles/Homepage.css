@@ -57,11 +57,16 @@
     }
 
     .frontpage .container {
-        width: 90%;
+        transform: translate(-50%, -10%);
     }
 
     .frontpage .container p {
         font-size: 5rem;
         line-height: 4rem;
+    }
+
+    .quote-homepage {
+        width: 200%;
+        height: auto;
     }
 }

@@ -28,21 +28,18 @@ export const getServerSideProps = async ({ params }) => {
                     ... on Event {
                         id
                         slug
-                        featuredImage {
-                            node {
-                                altText
-                                mediaItemUrl
-                            }
-                        }
                         events {
                             title
+                            featuredImage{
+                            altText
+                            mediaItemUrl
+                            }
                         }
                     }
                 }
                 previousEvents {
                     ... on PreviousEvent {
                         id
-                        title
                         previousEvents {
                             title
                             description
@@ -70,6 +67,10 @@ export const getServerSideProps = async ({ params }) => {
                 intro
                 client
                 date
+                featuredImage{
+                    altText
+                    mediaItemUrl
+                }
                 headerPicture {
                     altText
                     mediaItemUrl
@@ -87,12 +88,6 @@ export const getServerSideProps = async ({ params }) => {
                     mediaItemUrl
                 }
                 image4 {
-                    altText
-                    mediaItemUrl
-                }
-            }
-            featuredImage {
-                node {
                     altText
                     mediaItemUrl
                 }

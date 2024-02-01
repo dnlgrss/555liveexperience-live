@@ -6,6 +6,7 @@ import Head from 'next/head';
 import Image from 'next/image'
 //Components
 import Work from '@/components/UI/Work';
+import Loader from '@/components/UI/Loader';
 // Font
 import { Inter } from 'next/font/google'
 // Apollo
@@ -16,10 +17,10 @@ import parse from 'html-react-parser';
 import Header from '@/components/Layout/Header';
 import Credits from '@/components/Layout/Credits';
 
-import LogoDesktop from '@/public/assets/img/logo-white-yellow.png'
-import Loader from '@/components/UI/Loader';
 
-const inter = Inter({ subsets: ['latin'] })
+import LogoDesktop from '@/public/assets/img/logo-white-yellow.png'
+
+
 
 export const getServerSideProps = async () => {
     // Fetching SEO page
@@ -38,10 +39,22 @@ export const getServerSideProps = async () => {
         events {
             nodes {
                 id
-                title
                 slug
-                featuredImage {
-                    node {
+                events{
+                    title
+                    featuredImage {
+                        altText
+                        mediaItemUrl
+                    }
+                }
+            }
+        }
+        selectedClients {
+            nodes {
+                selectedClients {
+                    title
+                    clientLogo {
+                        altText
                         mediaItemUrl
                     }
                 }
@@ -65,8 +78,9 @@ export const getServerSideProps = async () => {
 export default function ourWorks({ data }) {
     const fullHead = parse(data?.page?.seo?.fullHead)
     const events = data.events.nodes
+    const selectedClients = data?.selectedClients?.nodes
 
-    const selectedClients = [LogoDesktop, LogoDesktop, LogoDesktop, LogoDesktop, LogoDesktop, LogoDesktop, LogoDesktop, LogoDesktop]
+    // const selectedClients = [LogoDesktop, LogoDesktop, LogoDesktop, LogoDesktop, LogoDesktop, LogoDesktop, LogoDesktop, LogoDesktop]
 
     return (
         <>
@@ -89,7 +103,7 @@ export default function ourWorks({ data }) {
                         selectedClients.map((single, i) =>
                             <Suspense fallback={<Loader />}>
                                 <div className='selected-clients-logos-image'>
-                                    <Image src={single} alt='555 Live Experience Logo' style={{ width: '100px', height: 'auto' }} key={i} />
+                                    <Image src={single.selectedClients.clientLogo.mediaItemUrl} alt={single.selectedClients.clientLogo.altText} width={100} height={30} style={{ width: '100px', height: 'auto', objectFit: 'contain' }} key={i} />
                                 </div>
                             </Suspense>
                         )

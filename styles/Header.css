@@ -47,6 +47,7 @@
 @media only screen and (min-width: 480px) {
     .header {
         /* Set the header background to black */
-        background-color: black;
+        background: black;
+        height: 70px;
     }
 }
