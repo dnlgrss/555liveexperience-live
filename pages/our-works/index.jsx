@@ -36,11 +36,11 @@ export const getServerSideProps = async () => {
                 title
             }
         }
-        events {
+        works {
             nodes {
                 id
                 slug
-                events{
+                works{
                     title
                     featuredImage {
                         altText
@@ -49,9 +49,9 @@ export const getServerSideProps = async () => {
                 }
             }
         }
-        selectedClients {
+        clients {
             nodes {
-                selectedClients {
+                clients {
                     title
                     clientLogo {
                         altText
@@ -76,20 +76,25 @@ export const getServerSideProps = async () => {
 }
 
 export default function ourWorks({ data }) {
-    const fullHead = parse(data?.page?.seo?.fullHead)
-    const events = data.events.nodes
-    const selectedClients = data?.selectedClients?.nodes
+    const seo = data?.page?.seo
+    const works = data.works.nodes
+    const clients = data?.clients?.nodes
 
     // const selectedClients = [LogoDesktop, LogoDesktop, LogoDesktop, LogoDesktop, LogoDesktop, LogoDesktop, LogoDesktop, LogoDesktop]
 
     return (
         <>
-            <Head>{fullHead}</Head>
+            <Head>
+                <title>{seo.title}</title>
+                <meta name="description" content={seo.metaDesc} />
+                <link rel="icon" href="/favicon.ico" />
+                {parse(seo.fullHead)}
+            </Head>
             <Header />
             <h1 className='network-h1'>Our Works</h1>
             <div className="works-list">
                 {
-                    events.map((single) =>
+                    works.map((single) =>
                         <Suspense fallback={<Loader />}>
                             <Work single={single} slug={data.page.slug} key={single.id} />
                         </Suspense>
@@ -100,10 +105,10 @@ export default function ourWorks({ data }) {
                 <p>Selected Clients</p>
                 <div className="selected-clients-logos">
                     {
-                        selectedClients.map((single, i) =>
+                        clients.map((single, i) =>
                             <Suspense fallback={<Loader />}>
                                 <div className='selected-clients-logos-image'>
-                                    <Image src={single.selectedClients.clientLogo.mediaItemUrl} alt={single.selectedClients.clientLogo.altText} width={100} height={30} style={{ width: '100px', height: 'auto', objectFit: 'contain' }} key={i} />
+                                    <Image src={single.clients.clientLogo.mediaItemUrl} alt={single.clients.clientLogo.altText} width={100} height={30} style={{ width: '100px', height: 'auto', objectFit: 'contain' }} key={i} />
                                 </div>
                             </Suspense>
                         )

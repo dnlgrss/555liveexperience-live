@@ -14,7 +14,7 @@ const Work = ({ single, slug }) => {
             {/* <div>{single.featuredImage}</div> */}
             {/* <div>{single.featuredImage.node.mediaItemUrl}</div> */}
             <Link href={`/${slug}/${single.slug}`} className='work-title'>
-                {single.events.title}
+                {single.works.title}
             </Link>
         </div>
     )

@@ -50,7 +50,7 @@ export const getStaticProps = async () => {
 }
 
 export default function Home({ data }) {
-  const fullHead = parse(data?.seo?.fullHead)
+  const { seo } = data
   const [showScrollDown, setShowScrollDown] = useState(true);
   // State to store screen width
   const [screenWidth, setScreenWidth] = useState(null);
@@ -89,7 +89,12 @@ export default function Home({ data }) {
 
   return (
     <>
-      <Head>{fullHead}</Head>
+      <Head>
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.metaDesc} />
+        <link rel="icon" href="/favicon.ico" />
+        {parse(seo.fullHead)}
+      </Head>
       <Header />
       <div className='frontpage'>
         <div className="container">

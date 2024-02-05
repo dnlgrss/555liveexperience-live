@@ -44,10 +44,15 @@ export const getStaticProps = async () => {
 }
 
 export default function contacts({ data }) {
-  const fullHead = parse(data?.seo?.fullHead)
+  const { seo } = data
   return (
     <>
-      <Head>{fullHead}</Head>
+      <Head>
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.metaDesc} />
+        <link rel="icon" href="/favicon.ico" />
+        {parse(seo.fullHead)}
+      </Head>
       <Header />
       <div className="contact-section">
         <h1 className='network-h1'>Get in touch</h1>

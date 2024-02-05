@@ -44,7 +44,7 @@ export const getStaticProps = async () => {
 }
 
 export default function ourNetwork({ data }) {
-  const fullHead = parse(data?.seo?.fullHead)
+  const { seo } = data
 
   const words = ["EVENT EXPERTS", "TECHNICIANS", "PROFESSIONALS", "FREELANCERS", "CREATIVES"];
   const [currentWord, setCurrentWord] = useState(words[0]);
@@ -86,7 +86,12 @@ export default function ourNetwork({ data }) {
 
   return (
     <>
-      <Head>{fullHead}</Head>
+      <Head>
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.metaDesc} />
+        <link rel="icon" href="/favicon.ico" />
+        {parse(seo.fullHead)}
+      </Head>
       <Header />
       <div className="network-page">
         <div>
