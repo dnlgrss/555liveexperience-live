@@ -9,24 +9,31 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleSidebar = () => {
-        // setIsOpen(!isOpen);
+        setIsOpen(!isOpen);
 
-        const newState = !isOpen;
-        setIsOpen(newState);
+        // const newState = !isOpen;
+        // setIsOpen(newState);
 
-        if (newState) {
+    };
+
+    useEffect(() => {
+        if (isOpen) {
             // Add the no-scroll class to the body when the sidebar is open
             document.body.classList.add('no-scroll');
         } else {
             // Remove the no-scroll class from the body when the sidebar is closed
             document.body.classList.remove('no-scroll');
         }
-    };
+    })
+
+    // useEffect(() => {
+    //     toggleSidebar()
+    // })
 
     return (
         <>
             <div className={`overlay ${isOpen ? 'active' : ''}`} onClick={toggleSidebar}></div>
-            <Sidebar isOpen={isOpen} />
+            <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
             <div className="header">
                 <Icon />
                 <Hamburger onClick={toggleSidebar} isOpen={isOpen} />

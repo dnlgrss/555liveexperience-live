@@ -16,11 +16,27 @@
     margin-bottom: 24px;
 }
 
-.work-box img {
-    object-fit: contain;
+.work-box-image {
+    position: relative;
     width: 100%;
-    height: auto;
+    height: 200px;
+    /* object-fit: contain; */
+}
+
+.work-box img {
     border: 1px black solid;
+}
+
+.selected-clients-logos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-content: center center;
+    margin: 0 16px;
+    gap: 10px;
+}
+
+.selected-clients-logos-image img {
+    position: relative !important;
 }
 
 @media only screen and (min-width: 480px) {

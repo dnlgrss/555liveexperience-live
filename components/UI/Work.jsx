@@ -3,16 +3,14 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import LogoDesktop from '@/public/assets/img/logo-white-yellow.png'
-
 const Work = ({ single, slug }) => {
     return (
         <div key={single.id} className='work-box'>
             <Link href={`/${slug}/${single.slug}`}>
-                <Image src={LogoDesktop} alt='555 Live Experience Logo' />
+                <div className='work-box-image'>
+                    <Image src={single.works.featuredImage.mediaItemUrl} alt={single.works.featuredImage.altText} fill={true} />
+                </div>
             </Link>
-            {/* <div>{single.featuredImage}</div> */}
-            {/* <div>{single.featuredImage.node.mediaItemUrl}</div> */}
             <Link href={`/${slug}/${single.slug}`} className='work-title'>
                 {single.works.title}
             </Link>

@@ -97,6 +97,8 @@ export default function ourWorks({ data }) {
                     works.map((single) =>
                         <Suspense fallback={<Loader />}>
                             <Work single={single} slug={data.page.slug} key={single.id} />
+                            <Work single={single} slug={data.page.slug} key={single.id} />
+                            <Work single={single} slug={data.page.slug} key={single.id} />
                         </Suspense>
                     )
                 }
@@ -108,7 +110,28 @@ export default function ourWorks({ data }) {
                         clients.map((single, i) =>
                             <Suspense fallback={<Loader />}>
                                 <div className='selected-clients-logos-image'>
-                                    <Image src={single.clients.clientLogo.mediaItemUrl} alt={single.clients.clientLogo.altText} width={100} height={30} style={{ width: '100px', height: 'auto', objectFit: 'contain' }} key={i} />
+                                    <Image src={single.clients.clientLogo.mediaItemUrl} alt={single.clients.clientLogo.altText} fill={true} key={i} />
+                                </div>
+                                <div className='selected-clients-logos-image'>
+                                    <Image src={single.clients.clientLogo.mediaItemUrl} alt={single.clients.clientLogo.altText} fill={true} key={i} />
+                                </div>
+                                <div className='selected-clients-logos-image'>
+                                    <Image src={single.clients.clientLogo.mediaItemUrl} alt={single.clients.clientLogo.altText} fill={true} key={i} />
+                                </div>
+                                <div className='selected-clients-logos-image'>
+                                    <Image src={single.clients.clientLogo.mediaItemUrl} alt={single.clients.clientLogo.altText} fill={true} key={i} />
+                                </div>
+                                <div className='selected-clients-logos-image'>
+                                    <Image src={single.clients.clientLogo.mediaItemUrl} alt={single.clients.clientLogo.altText} fill={true} key={i} />
+                                </div>
+                                <div className='selected-clients-logos-image'>
+                                    <Image src={single.clients.clientLogo.mediaItemUrl} alt={single.clients.clientLogo.altText} fill={true} key={i} />
+                                </div>
+                                <div className='selected-clients-logos-image'>
+                                    <Image src={single.clients.clientLogo.mediaItemUrl} alt={single.clients.clientLogo.altText} fill={true} key={i} />
+                                </div>
+                                <div className='selected-clients-logos-image'>
+                                    <Image src={single.clients.clientLogo.mediaItemUrl} alt={single.clients.clientLogo.altText} fill={true} key={i} />
                                 </div>
                             </Suspense>
                         )

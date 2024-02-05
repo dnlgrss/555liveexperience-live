@@ -1,13 +1,14 @@
 .hamburger-menu {
-    width: 40px;
+    /* Ensure this is higher than the sidebar */
+    z-index: 999;
     /* Adjust the width as needed */
-    height: 45px;
+    width: 40px;
     /* Adjust the height as needed */
+    height: 45px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    z-index: 999;
 }
 
 .hamburger-menu .line {

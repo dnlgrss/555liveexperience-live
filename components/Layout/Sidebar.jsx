@@ -1,7 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
+import Hamburger from '../UI/Hamburger'
 
-const Sidebar = ({ isOpen }) => {
+const Sidebar = ({ isOpen, toggleSidebar }) => {
     return (
         <div className={`sidebar ${isOpen ? 'open' : ''}`}>
             <div className="menu">
