@@ -33,7 +33,7 @@
         flex-direction: column;
         /* This will push the credits to the bottom */
         justify-content: space-between;
-        min-height: 100dvh;
+        min-height: calc(100dvh - 70px);
     }
 
     .contact-grid {

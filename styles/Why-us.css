@@ -37,6 +37,7 @@
 
 .animated-line {
     margin-bottom: 108px;
+    overflow: hidden !important;
 }
 
 .animated-line p {
@@ -69,6 +70,12 @@ p {
 .main-text {
     font-size: 20px;
 } */
+@media only screen and (max-width: 480px) {
+    .fixed-animated-container {
+        position: absolute;
+        top: 50%;
+    }
+}
 
 @media only screen and (min-width: 480px) {
     .animated-line {
