@@ -18,20 +18,20 @@
 
 .sidebar .menu {
     margin-left: 20px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .menu-item {
     display: block;
     /* Font items */
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 200;
     /* Space between items */
     margin-bottom: 10px;
     /* White line under each item */
     border-bottom: 2px solid white;
     /* Padding for the bottom border */
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     /* Adjust the color as needed */
     color: #000;
     /* Removes underline from links */

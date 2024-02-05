@@ -13,6 +13,10 @@
     margin-bottom: 120px;
 }
 
+.animated-word {
+    margin-top: 20px !important;
+}
+
 @media only screen and (min-width: 480px) {
 
     .network-page {

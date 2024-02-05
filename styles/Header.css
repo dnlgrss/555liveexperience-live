@@ -5,7 +5,7 @@
     /* Set the top edge of the header to stick at the top of the viewport */
     top: 0;
     /* Ensure the header is above other content */
-    z-index: 998;
+    z-index: 997;
     background: #FFF;
     /* Consider adding a background color if your header is not opaque */
     display: flex;
@@ -32,11 +32,11 @@
     /* Black background with 60% opacity */
     background: rgba(0, 0, 0, 0.6);
     /* Ensure it's below the sidebar but above other content */
-    z-index: 997;
+    z-index: 998;
 }
 
 .no-scroll {
-    overflow: hidden !important;
+    /* overflow: hidden !important; */
     height: 100%;
 }
 
