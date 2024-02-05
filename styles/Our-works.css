@@ -52,6 +52,10 @@
         margin-bottom: 0;
     }
 
+    .work-box-image {
+        height: 400px;
+    }
+
     .selected-clients p {
         font-size: 36px;
     }
