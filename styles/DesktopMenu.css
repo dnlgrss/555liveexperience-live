@@ -7,6 +7,10 @@
     padding: 20px;
 }
 
+.desktop-menu a {
+    margin-right: 36px;
+}
+
 .desktop-menu-item {
     /* or inline-block, depending on your design */
     display: block;

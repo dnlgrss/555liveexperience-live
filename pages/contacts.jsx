@@ -68,11 +68,13 @@ export default function contacts({ data }) {
           </div>
           <div>
             <div className="address-area">
-              <p>Find us in Dubai | Riyadh | Brussels</p>
-              <p className="grey">No. 06.01</p>
-              <p className="grey">The Offices 2 At One Central</p>
-              <p className="grey">Dubai</p>
-              <p className="grey">United Arab Emirates</p>
+              <p className='find-us-margined'>Find us in Dubai | Riyadh | Brussels</p>
+              <div>
+                <p className="grey">No. 06.01</p>
+                <p className="grey">The Offices 2 At One Central</p>
+                <p className="grey">Dubai</p>
+                <p className="grey">United Arab Emirates</p>
+              </div>
             </div>
             <div className="social-area">
               <p>Follow us</p>

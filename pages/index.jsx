@@ -102,12 +102,10 @@ export default function Home({ data }) {
             ?
             <>
               <p className='quote' style={{ fontFamily: "'Marchellia', sans-serif", marginBottom: '56px' }}>“If everything seems under control, you’re not going fast enough.”</p>
-              <p className='quote' style={{ fontFamily: "'Marchellia', sans-serif", marginBottom: '56px' }}>- M. Andretti</p>
             </>
             :
             <>
-              <Image src={QuoteDesktop} alt='555 Live Experience Logo - Andretti Quote' className='quote-homepage' />
-              <p className='quote' style={{ fontFamily: "'Marchellia', sans-serif", marginBottom: '56px' }}>- M. Andretti</p>
+              <Image src={QuoteDesktop} alt='555 Live Experience - Andretti Quote' className='quote-homepage' />
             </>
           }
         </div>
@@ -117,14 +115,14 @@ export default function Home({ data }) {
           </div>
         )}
       </div>
-      <div className="vimeo-video" style={{ width: '100dvw', height: '100dvh' }}>
+      <div className="vimeo-video" style={{ width: '100dvw', height: '100%' }}>
         <VimeoVideo
           verticalVideoUrl="https://player.vimeo.com/video/108883988"
           horizontalVideoUrl="https://player.vimeo.com/video/260272259"
         />
       </div>
       <div className="circle-quote">
-        <Image src={CircleQuote} />
+        <Image src={CircleQuote} alt='Positive impact on your live experience' />
       </div>
       <Credits />
     </>

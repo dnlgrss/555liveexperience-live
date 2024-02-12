@@ -47,8 +47,10 @@ export default function ourNetwork({ data }) {
   const { seo } = data
 
   const words = ["EVENT EXPERTS", "TECHNICIANS", "PROFESSIONALS", "FREELANCERS", "CREATIVES"];
-  const [currentWord, setCurrentWord] = useState(words[0]);
-  const [animation, setAnimation] = useState(0);
+  // const [currentWord, setCurrentWord] = useState(words[0]);
+  // const [animation, setAnimation] = useState(0);
+  const [currentWord, setCurrentWord] = useState(words[0].split('').map(char => ({ char, visible: false })));
+  const [wordIndex, setWordIndex] = useState(0);
   // State to store screen width
   const [screenWidth, setScreenWidth] = useState(null);
 
@@ -69,20 +71,48 @@ export default function ourNetwork({ data }) {
   }, []); // Empty array ensures that effect runs only on mount and unmount
 
   useEffect(() => {
-    let index = 0;
-    const intervalId = setInterval(() => {
-      setAnimation('slide-down'); // Start slide-down animation
+    const revealChar = setTimeout(() => {
+      setCurrentWord((current) => {
+        const isComplete = current.every(({ visible }) => visible);
+        if (!isComplete) {
+          return current.map((obj, index) => ({
+            ...obj,
+            visible: index <= current.findIndex(({ visible }) => !visible) ? true : obj.visible,
+          }));
+        }
+        return current;
+      });
+    }, 150); // Delay between revealing each character
 
-      setTimeout(() => {
-        index = (index + 1) % words.length;
-        setCurrentWord(words[index]);
-        setAnimation('slide-up'); // Start slide-up animation
-      }, 500); // Halfway through the interval
+    const isCurrentWordComplete = currentWord.every(({ visible }) => visible);
+    if (isCurrentWordComplete) {
+      const resetAndNextWord = setTimeout(() => {
+        const nextWordIndex = (wordIndex + 1) % words.length;
+        setCurrentWord(words[nextWordIndex].split('').map(char => ({ char, visible: false })));
+        setWordIndex(nextWordIndex);
+      }, 2000); // Delay before moving to the next word
 
-    }, 2000); // Change word every 2000ms (2 seconds)
+      return () => clearTimeout(resetAndNextWord);
+    }
 
-    return () => clearInterval(intervalId);
-  }, []);
+    return () => clearTimeout(revealChar);
+  }, [currentWord, wordIndex]);
+
+  // useEffect(() => {
+  //   let index = 0;
+  //   const intervalId = setInterval(() => {
+  //     setAnimation('slide-down'); // Start slide-down animation
+
+  //     setTimeout(() => {
+  //       index = (index + 1) % words.length;
+  //       setCurrentWord(words[index]);
+  //       setAnimation('slide-up'); // Start slide-up animation
+  //     }, 500); // Halfway through the interval
+
+  //   }, 2000); // Change word every 2000ms (2 seconds)
+
+  //   return () => clearInterval(intervalId);
+  // }, []);
 
   return (
     <>
@@ -98,10 +128,16 @@ export default function ourNetwork({ data }) {
           <h1 className='network-h1'>Our Network</h1>
           <p>Join us in creating shared moments across global fan bases, turning every event into a timeless phenomenon.</p>
           <div className="network-quote">
-            {screenWidth < 480 ?
-              <p>We are always looking for talented <br /> <span style={{ fontFamily: "'Marchellia', sans-serif" }} className={`animated-word ${animation}`}>{currentWord}</span> <br /> from all over the world.</p>
-              : <p>We are always looking for talented <span style={{ fontFamily: "'Marchellia', sans-serif" }} className={`animated-word ${animation}`}>{currentWord}</span> <br /> from all over the world.</p>
-            }
+
+            <p>We are always looking for talented </p>
+            <div className="animated-word">
+              {currentWord.map(({ char, visible }, index) => (
+                <p key={index} style={{ visibility: visible ? 'visible' : 'hidden' }}>
+                  {char === ' ' ? '\u00A0' : char}
+                </p>
+              ))}
+            </div>
+            <p>from all over the world.</p>
           </div>
         </div>
         <Credits />

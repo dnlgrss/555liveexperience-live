@@ -13,9 +13,9 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             </div>
             <div className="social-media">
                 <p className="follow-us">Follow us</p>
-                <a href="https://www.linkedin.com" className="social-link">Linkedin</a>
-                <a href="https://www.instagram.com" className="social-link">Instagram</a>
-                <a href="https://www.vimeo.com" className="social-link">Vimeo</a>
+                <a href="https://www.linkedin.com/company/555-live-events/" className="social-link">Linkedin</a>
+                <a href="https://www.instagram.com/555.live/" className="social-link">Instagram</a>
+                <a href="https://vimeo.com/user214578179" className="social-link">Vimeo</a>
             </div>
         </div>
     )

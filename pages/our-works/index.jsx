@@ -94,7 +94,7 @@ export default function ourWorks({ data }) {
             <h1 className='network-h1'>Our Works</h1>
             <div className="works-list">
                 {
-                    works.map((single) =>
+                    works.map((single, i) =>
                         <Suspense fallback={<Loader />}>
                             <Work single={single} slug={data.page.slug} key={single.id} />
                             <Work single={single} slug={data.page.slug} key={single.id} />

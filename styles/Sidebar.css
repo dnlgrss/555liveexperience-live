@@ -17,8 +17,8 @@
 }
 
 .sidebar .menu {
-    margin-left: 20px;
-    margin-top: 50px;
+    /* margin-left: 20px; */
+    margin-top: 25px;
 }
 
 .menu-item {
@@ -27,7 +27,7 @@
     font-size: 50px;
     font-weight: 200;
     /* Space between items */
-    margin-bottom: 10px;
+    padding-bottom: 10px;
     /* White line under each item */
     border-bottom: 2px solid white;
     /* Padding for the bottom border */
@@ -36,6 +36,8 @@
     color: #000;
     /* Removes underline from links */
     text-decoration: none;
+    /* Remove right margin from p default*/
+    margin-right: 0;
 }
 
 .menu-item:active {

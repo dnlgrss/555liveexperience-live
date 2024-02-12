@@ -22,22 +22,39 @@
     }
 }
 
-.animated-word {
-    /* display: inline-block; */
-    overflow: hidden;
-}
+@keyframes blinkCursor {
+    from {
+        border-right-color: transparent;
+    }
 
-.slide-up {
-    animation: slideUp 0.5s forwards;
-}
-
-.slide-down {
-    animation: slideDown 0.5s forwards;
+    to {
+        border-right-color: initial;
+    }
 }
 
 .animated-line {
-    margin-bottom: 108px;
-    overflow: hidden !important;
+    margin-top: 16px;
+}
+
+.network-quote p,
+.animated-line p {
+    margin: 0 16px;
+}
+
+.animated-word {
+    display: flex;
+    flex-direction: row;
+    margin: 0 16px !important;
+    /* Cursor */
+    white-space: nowrap;
+    /* Keep the text in one line */
+    overflow: hidden;
+    /* Hide overflow */
+    animation: blinkCursor 500ms steps(44) infinite normal;
+}
+
+.animated-word p {
+    margin: 0;
 }
 
 .animated-line p {
@@ -63,13 +80,6 @@ p {
     margin-top: 36px;
 }
 
-/* .main-text div {
-    margin: 20px 0;
-}
-
-.main-text {
-    font-size: 20px;
-} */
 @media only screen and (max-width: 480px) {
     .fixed-animated-container {
         position: absolute;
@@ -79,7 +89,7 @@ p {
 
 @media only screen and (min-width: 480px) {
     .animated-line {
-        margin-top: 100px;
+        margin: 50px 0;
     }
 
     .animated-line p {

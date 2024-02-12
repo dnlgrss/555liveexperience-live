@@ -50,19 +50,21 @@
     .circle-quote img {
         width: 120px;
         margin-right: 50px;
+        margin-top: 48px;
     }
 
     .frontpage {
-        width: 100dvw;
+        width: 100vw;
         height: 100dvh;
         display: flex;
         justify-content: center;
-        align-items: center;
+        /* align-items: center; */
     }
 
     .frontpage .container {
-        margin-top: 0;
-        transform: translate(-50%, -10%);
+        width: 70%;
+        margin-top: 5%;
+        margin-right: 10%;
     }
 
     .frontpage .container p {
@@ -71,7 +73,7 @@
     }
 
     .quote-homepage {
-        width: 200%;
+        width: auto;
         height: auto;
     }
 }

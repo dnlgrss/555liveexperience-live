@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin-right: 16px;
 }
 
 .hamburger-menu .line {
