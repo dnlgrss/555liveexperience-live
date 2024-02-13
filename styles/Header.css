@@ -4,6 +4,7 @@
     position: sticky;
     /* Set the top edge of the header to stick at the top of the viewport */
     top: 0;
+    height: 65px;
     /* Ensure the header is above other content */
     z-index: 997;
     background: #FFF;

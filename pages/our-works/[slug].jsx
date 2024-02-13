@@ -5,16 +5,13 @@ import Head from 'next/head';
 import Link from 'next/link'
 //Components
 import Header from '@/components/Layout/Header';
+import AccordionMenu from '@/components/UI/AccordionMenu';
+import Credits from '@/components/Layout/Credits';
 // Apollo
 import { client } from '@/helpers/apollo';
 import { gql } from '@apollo/client';
 // Parser
 import parse from 'html-react-parser';
-import AccordionMenu from '@/components/UI/AccordionMenu';
-
-
-import LogoDesktop from '@/public/assets/img/logo-white-yellow.png'
-import Credits from '@/components/Layout/Credits';
 
 export const getServerSideProps = async ({ params }) => {
     const { slug } = params

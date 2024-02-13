@@ -10,6 +10,9 @@
     justify-content: space-around;
     align-items: center;
     margin-right: 16px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
 }
 
 .hamburger-menu .line {

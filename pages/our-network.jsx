@@ -2,9 +2,7 @@
 import React, { useState, useEffect } from 'react';
 //Nextjs
 import Head from 'next/head';
-import Image from 'next/image'
 // Font
-import { Inter } from 'next/font/google'
 // Apollo
 import { client } from '@/helpers/apollo';
 import { gql } from '@apollo/client';
@@ -12,8 +10,6 @@ import { gql } from '@apollo/client';
 import parse from 'html-react-parser';
 import Header from '@/components/Layout/Header';
 import Credits from '@/components/Layout/Credits';
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const getStaticProps = async () => {
   // Fetching SEO page
@@ -133,6 +129,15 @@ export default function ourNetwork({ data }) {
             <div className="animated-word">
               {currentWord.map(({ char, visible }, index) => (
                 <p key={index} style={{ visibility: visible ? 'visible' : 'hidden' }}>
+                  {/* <p key={index} style={{ visibility: visible ? 'visible' : 'hidden', fontFamily: "'Marchellia', sans-serif", height: '49px', paddingTop: '7px' }}> */}
+                  {char === ' ' ? '\u00A0' : char}
+                </p>
+              ))}
+            </div>
+            <div className="animated-word">
+              {currentWord.map(({ char, visible }, index) => (
+                <p key={index} style={{ visibility: visible ? 'visible' : 'hidden', fontFamily: "'Marchellia', sans-serif", height: '49px', paddingTop: '7px' }}>
+                  {/* <p key={index} style={{ visibility: visible ? 'visible' : 'hidden' }}> */}
                   {char === ' ' ? '\u00A0' : char}
                 </p>
               ))}

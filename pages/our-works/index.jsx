@@ -1,6 +1,6 @@
 //React
 import React from 'react';
-import { Suspense } from 'react'
+import { Suspense, useState, useEffect } from 'react'
 //Nextjs
 import Head from 'next/head';
 import Image from 'next/image'
@@ -16,11 +16,6 @@ import { gql } from '@apollo/client';
 import parse from 'html-react-parser';
 import Header from '@/components/Layout/Header';
 import Credits from '@/components/Layout/Credits';
-
-
-import LogoDesktop from '@/public/assets/img/logo-white-yellow.png'
-
-
 
 export const getServerSideProps = async () => {
     // Fetching SEO page
@@ -53,7 +48,11 @@ export const getServerSideProps = async () => {
             nodes {
                 clients {
                     title
-                    clientLogo {
+                    clientLogoLight {
+                        altText
+                        mediaItemUrl
+                    }
+                    clientLogoDark {
                         altText
                         mediaItemUrl
                     }
@@ -79,6 +78,24 @@ export default function ourWorks({ data }) {
     const seo = data?.page?.seo
     const works = data.works.nodes
     const clients = data?.clients?.nodes
+    // State to store screen width
+    const [screenWidth, setScreenWidth] = useState(null);
+
+    useEffect(() => {
+        // Set initial value
+        setScreenWidth(window.innerWidth);
+
+        // Handler to call on window resize
+        const handleResize = () => {
+            setScreenWidth(window.innerWidth);
+        };
+
+        // Add event listener
+        window.addEventListener('resize', handleResize);
+
+        // Remove event listener on cleanup
+        return () => window.removeEventListener('resize', handleResize);
+    }, []); // Empty array ensures that effect runs only on mount and unmount
 
     // const selectedClients = [LogoDesktop, LogoDesktop, LogoDesktop, LogoDesktop, LogoDesktop, LogoDesktop, LogoDesktop, LogoDesktop]
 
@@ -110,28 +127,28 @@ export default function ourWorks({ data }) {
                         clients.map((single, i) =>
                             <Suspense fallback={<Loader />}>
                                 <div className='selected-clients-logos-image'>
-                                    <Image src={single.clients.clientLogo.mediaItemUrl} alt={single.clients.clientLogo.altText} fill={true} key={i} />
+                                    <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
                                 </div>
                                 <div className='selected-clients-logos-image'>
-                                    <Image src={single.clients.clientLogo.mediaItemUrl} alt={single.clients.clientLogo.altText} fill={true} key={i} />
+                                    <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
                                 </div>
                                 <div className='selected-clients-logos-image'>
-                                    <Image src={single.clients.clientLogo.mediaItemUrl} alt={single.clients.clientLogo.altText} fill={true} key={i} />
+                                    <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
                                 </div>
                                 <div className='selected-clients-logos-image'>
-                                    <Image src={single.clients.clientLogo.mediaItemUrl} alt={single.clients.clientLogo.altText} fill={true} key={i} />
+                                    <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
                                 </div>
                                 <div className='selected-clients-logos-image'>
-                                    <Image src={single.clients.clientLogo.mediaItemUrl} alt={single.clients.clientLogo.altText} fill={true} key={i} />
+                                    <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
                                 </div>
                                 <div className='selected-clients-logos-image'>
-                                    <Image src={single.clients.clientLogo.mediaItemUrl} alt={single.clients.clientLogo.altText} fill={true} key={i} />
+                                    <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
                                 </div>
                                 <div className='selected-clients-logos-image'>
-                                    <Image src={single.clients.clientLogo.mediaItemUrl} alt={single.clients.clientLogo.altText} fill={true} key={i} />
+                                    <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
                                 </div>
                                 <div className='selected-clients-logos-image'>
-                                    <Image src={single.clients.clientLogo.mediaItemUrl} alt={single.clients.clientLogo.altText} fill={true} key={i} />
+                                    <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
                                 </div>
                             </Suspense>
                         )

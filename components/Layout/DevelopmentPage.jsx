@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Image from 'next/image';
 // Image
-import LogoBlack from '@/public/assets/img/logo-black-white.png';
-import LogoWhite from '@/public/assets/img/logo-white-yellow.png';
+import LogoBlack from '@/public/assets/img/logo-black-white.svg';
+import LogoWhite from '@/public/assets/img/logo-white-yellow.svg';
 
 const DevelopmentPage = () => {
     // State to store screen width
