@@ -42,7 +42,8 @@ export const getStaticProps = async () => {
 export default function ourNetwork({ data }) {
   const { seo } = data
 
-  const words = ["EVENT EXPERTS", "TECHNICIANS", "PROFESSIONALS", "FREELANCERS", "CREATIVES"];
+  const words = ["event experts", "technicians", "professionals", "freelancers", "creatives"];
+  // const words = ["EVENT EXPERTS", "TECHNICIANS", "PROFESSIONALS", "FREELANCERS", "CREATIVES"];
   // const [currentWord, setCurrentWord] = useState(words[0]);
   // const [animation, setAnimation] = useState(0);
   const [currentWord, setCurrentWord] = useState(words[0].split('').map(char => ({ char, visible: false })));
@@ -78,7 +79,7 @@ export default function ourNetwork({ data }) {
         }
         return current;
       });
-    }, 150); // Delay between revealing each character
+    }, 50); // Delay between revealing each character
 
     const isCurrentWordComplete = currentWord.every(({ visible }) => visible);
     if (isCurrentWordComplete) {
@@ -128,16 +129,8 @@ export default function ourNetwork({ data }) {
             <p>We are always looking for talented </p>
             <div className="animated-word">
               {currentWord.map(({ char, visible }, index) => (
-                <p key={index} style={{ visibility: visible ? 'visible' : 'hidden' }}>
+                <p key={index} style={{ visibility: visible ? 'visible' : 'hidden', height: `${screenWidth < 480 ? '62px' : '73px'}` }}>
                   {/* <p key={index} style={{ visibility: visible ? 'visible' : 'hidden', fontFamily: "'Marchellia', sans-serif", height: '49px', paddingTop: '7px' }}> */}
-                  {char === ' ' ? '\u00A0' : char}
-                </p>
-              ))}
-            </div>
-            <div className="animated-word">
-              {currentWord.map(({ char, visible }, index) => (
-                <p key={index} style={{ visibility: visible ? 'visible' : 'hidden', fontFamily: "'Marchellia', sans-serif", height: '49px', paddingTop: '7px' }}>
-                  {/* <p key={index} style={{ visibility: visible ? 'visible' : 'hidden' }}> */}
                   {char === ' ' ? '\u00A0' : char}
                 </p>
               ))}

@@ -33,8 +33,8 @@ const Header = () => {
     return (
         <>
             <div className={`overlay ${isOpen ? 'active' : ''}`} onClick={toggleSidebar}></div>
-            <Hamburger onClick={toggleSidebar} isOpen={isOpen} />
             <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
+            <Hamburger onClick={toggleSidebar} isOpen={isOpen} />
             <div className="header">
                 <Icon />
                 <DesktopMenu /> {/* Include the DesktopMenu component */}

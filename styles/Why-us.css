@@ -88,7 +88,7 @@ p {
 
 @media only screen and (min-width: 480px) {
     .animated-line {
-        margin: 50px 0;
+        margin: 120px 0;
     }
 
     .animated-line p {
@@ -108,10 +108,16 @@ p {
         width: 70%;
     }
 
+    .main-text p {
+        margin-left: 0;
+        font-size: 19px;
+    }
+
     .intro p {
         font-size: 46px;
         width: 80%;
         line-height: 45px;
+        font-weight: 200;
     }
 
     .subheaders>div {

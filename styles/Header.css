@@ -49,6 +49,9 @@
     .header {
         /* Set the header background to black */
         background: black;
+        position: fixed;
+        top: 0;
         height: 70px;
+        width: 100vw;
     }
 }

@@ -108,54 +108,60 @@ export default function ourWorks({ data }) {
                 {parse(seo.fullHead)}
             </Head>
             <Header />
-            <h1 className='network-h1'>Our Works</h1>
-            <div className="works-list">
-                {
-                    works.map((single, i) =>
-                        <Suspense fallback={<Loader />}>
-                            <Work single={single} slug={data.page.slug} key={single.id} />
-                            <Work single={single} slug={data.page.slug} key={single.id} />
-                            <Work single={single} slug={data.page.slug} key={single.id} />
-                        </Suspense>
-                    )
-                }
-            </div>
-            <div className="selected-clients">
-                <p>Selected Clients</p>
-                <div className="selected-clients-logos">
-                    {
-                        clients.map((single, i) =>
-                            <Suspense fallback={<Loader />}>
-                                <div className='selected-clients-logos-image'>
-                                    <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
-                                </div>
-                                <div className='selected-clients-logos-image'>
-                                    <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
-                                </div>
-                                <div className='selected-clients-logos-image'>
-                                    <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
-                                </div>
-                                <div className='selected-clients-logos-image'>
-                                    <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
-                                </div>
-                                <div className='selected-clients-logos-image'>
-                                    <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
-                                </div>
-                                <div className='selected-clients-logos-image'>
-                                    <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
-                                </div>
-                                <div className='selected-clients-logos-image'>
-                                    <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
-                                </div>
-                                <div className='selected-clients-logos-image'>
-                                    <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
-                                </div>
-                            </Suspense>
-                        )
-                    }
+            <div className="works-section">
+                <div>
+
+
+                    <h1 className='network-h1'>Our Works</h1>
+                    <div className="works-list">
+                        {
+                            works.map((single, i) =>
+                                <Suspense fallback={<Loader />}>
+                                    <Work single={single} slug={data.page.slug} key={single.id} />
+                                    <Work single={single} slug={data.page.slug} key={single.id} />
+                                    <Work single={single} slug={data.page.slug} key={single.id} />
+                                </Suspense>
+                            )
+                        }
+                    </div>
+                    <div className="selected-clients">
+                        <p>Selected Clients</p>
+                        <div className="selected-clients-logos">
+                            {
+                                clients.map((single, i) =>
+                                    <Suspense fallback={<Loader />}>
+                                        <div className='selected-clients-logos-image'>
+                                            <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
+                                        </div>
+                                        <div className='selected-clients-logos-image'>
+                                            <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
+                                        </div>
+                                        <div className='selected-clients-logos-image'>
+                                            <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
+                                        </div>
+                                        <div className='selected-clients-logos-image'>
+                                            <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
+                                        </div>
+                                        <div className='selected-clients-logos-image'>
+                                            <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
+                                        </div>
+                                        <div className='selected-clients-logos-image'>
+                                            <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
+                                        </div>
+                                        <div className='selected-clients-logos-image'>
+                                            <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
+                                        </div>
+                                        <div className='selected-clients-logos-image'>
+                                            <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
+                                        </div>
+                                    </Suspense>
+                                )
+                            }
+                        </div>
+                    </div>
                 </div>
+                <Credits />
             </div>
-            <Credits />
         </>
     )
 }

@@ -27,13 +27,17 @@
     margin-bottom: 0;
 }
 
+.enquiries {
+    margin: 0 16px;
+}
+
 @media only screen and (min-width: 480px) {
     .contact-section {
         display: flex;
         flex-direction: column;
         /* This will push the credits to the bottom */
         justify-content: space-between;
-        min-height: calc(100dvh - 70px);
+        min-height: 100dvh;
     }
 
     .contact-grid {
@@ -48,12 +52,10 @@
         justify-self: end;
     }
 
-    .enquiries {
-        margin-top: 0;
-    }
 
-    .find-us-margined {
+
+    /* .find-us-margined {
         margin-bottom: 16px !important;
-    }
+    } */
 
 }
