@@ -79,7 +79,7 @@ export default function ourNetwork({ data }) {
         }
         return current;
       });
-    }, 50); // Delay between revealing each character
+    }, 20); // Delay between revealing each character
 
     const isCurrentWordComplete = currentWord.every(({ visible }) => visible);
     if (isCurrentWordComplete) {
@@ -129,7 +129,7 @@ export default function ourNetwork({ data }) {
             <p>We are always looking for talented </p>
             <div className="animated-word">
               {currentWord.map(({ char, visible }, index) => (
-                <p key={index} style={{ visibility: visible ? 'visible' : 'hidden', height: `${screenWidth < 480 ? '62px' : '73px'}` }}>
+                <p key={index} style={{ visibility: visible ? 'visible' : 'hidden', height: `${screenWidth < 480 ? '55px' : '73px'}` }}>
                   {/* <p key={index} style={{ visibility: visible ? 'visible' : 'hidden', fontFamily: "'Marchellia', sans-serif", height: '49px', paddingTop: '7px' }}> */}
                   {char === ' ' ? '\u00A0' : char}
                 </p>

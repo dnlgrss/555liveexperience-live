@@ -27,7 +27,10 @@
     font-size: 50px;
     font-weight: 200;
     /* Space between items */
-    padding-bottom: 10px;
+    /* padding-bottom: 10px;  TOO BIG*/
+    /* padding-bottom and margin-top has to be equal */
+    padding-bottom: 7px;
+    margin: 7px 16px;
     /* White line under each item */
     border-bottom: 2px solid white;
     /* Padding for the bottom border */
