@@ -118,8 +118,6 @@ export default function ourWorks({ data }) {
                             works.map((single, i) =>
                                 <Suspense fallback={<Loader />}>
                                     <Work single={single} slug={data.page.slug} key={single.id} />
-                                    <Work single={single} slug={data.page.slug} key={single.id} />
-                                    <Work single={single} slug={data.page.slug} key={single.id} />
                                 </Suspense>
                             )
                         }
@@ -130,27 +128,6 @@ export default function ourWorks({ data }) {
                             {
                                 clients.map((single, i) =>
                                     <Suspense fallback={<Loader />}>
-                                        <div className='selected-clients-logos-image'>
-                                            <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
-                                        </div>
-                                        <div className='selected-clients-logos-image'>
-                                            <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
-                                        </div>
-                                        <div className='selected-clients-logos-image'>
-                                            <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
-                                        </div>
-                                        <div className='selected-clients-logos-image'>
-                                            <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
-                                        </div>
-                                        <div className='selected-clients-logos-image'>
-                                            <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
-                                        </div>
-                                        <div className='selected-clients-logos-image'>
-                                            <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
-                                        </div>
-                                        <div className='selected-clients-logos-image'>
-                                            <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
-                                        </div>
                                         <div className='selected-clients-logos-image'>
                                             <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
                                         </div>

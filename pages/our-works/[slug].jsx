@@ -145,10 +145,10 @@ const single = ({ data }) => {
             <div>Title: {JSON.stringify(works.title)}</div>
             <div>Intro: {JSON.stringify(works.intro)}</div>
             <div>Intro 2: {JSON.stringify(works.intro2)}</div>
-            <div>Client: {JSON.stringify(works.category)}</div>
+            <div>Category: {JSON.stringify(works.category)}</div>
             <div>Client: {JSON.stringify(works.client)}</div>
             <div>Date: {JSON.stringify(works.date)}</div>
-            <div>Date: {JSON.stringify(works.location)}</div>
+            <div>Location: {JSON.stringify(works.location)}</div>
             {/* <div>Img 1: {JSON.stringify(works.image1.mediaItemUrl)}</div>
             <div>Img 1 Alt-text: {JSON.stringify(works.image1.altText)}</div>
             <div>Img 2: {JSON.stringify(works.image2.mediaItemUrl)}</div>
