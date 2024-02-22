@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl }) => {
+const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isHome = false }) => {
     // State to store screen width
     const [screenWidth, setScreenWidth] = useState(null);
 
@@ -23,7 +23,7 @@ const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl }) => {
     const videoUrl = screenWidth > 480 ? horizontalVideoUrl : verticalVideoUrl;
 
     return (
-        <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
+        <div style={{ padding: '56.25% 0 0 0', position: 'relative', height: `${isHome ? '100dvh' : 'auto'}` }}>
             <iframe
                 src={`${videoUrl}?autoplay=1&loop=1&muted=1&controls=0&sidedock=0&title=0`}
                 style={{

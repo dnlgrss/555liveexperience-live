@@ -115,10 +115,12 @@ export default function Home({ data }) {
           </div>
         )}
       </div>
-      <div className="vimeo-video" style={{ width: '100dvw', height: '100%' }}>
+      {/* <div className="vimeo-video" style={{ width: '100dvw', height: '100%' }}> */}
+      <div>
         <VimeoVideo
           verticalVideoUrl="https://player.vimeo.com/video/108883988"
           horizontalVideoUrl="https://player.vimeo.com/video/260272259"
+          isHome={true}
         />
       </div>
       <div className="circle-quote">

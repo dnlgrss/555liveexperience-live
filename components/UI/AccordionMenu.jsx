@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { FaPlus, FaMinus } from 'react-icons/fa'; // You need to install react-icons
+import VimeoVideo from './VimeoVideo';
+import { transformVimeoLink } from '@/helpers/vimeo';
 
 const AccordionMenu = ({ previousWorks }) => {
     const [openItemId, setOpenItemId] = useState(null);
@@ -22,6 +24,12 @@ const AccordionMenu = ({ previousWorks }) => {
                     </div>
                     {openItemId === event.id && (
                         <div className="accordion-content">
+                            {event.previousWorks.video &&
+                                <VimeoVideo
+                                    verticalVideoUrl={transformVimeoLink(event.previousWorks.video)}
+                                    horizontalVideoUrl={transformVimeoLink(event.previousWorks.video)}
+                                />
+                            }
                             {event.previousWorks.description && <p>{event.previousWorks.description}</p>}
                             {event.previousWorks.image1 && (
                                 <img src={event.previousWorks.image1.mediaItemUrl} alt={event.previousWorks.image1.altText} />

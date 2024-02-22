@@ -73,7 +73,7 @@
 }
 
 .follow-us {
-    margin-bottom: 5px;
+    margin-bottom: 5px !important;
     /* Adjust the color as needed */
     color: #000;
 }

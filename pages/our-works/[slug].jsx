@@ -24,6 +24,11 @@ export const getServerSideProps = async ({ params }) => {
         work(id: $id, idType: SLUG) {
             works {
                 video
+                hasVideo
+                headerPicture{
+                    altText
+                    mediaItemUrl
+                }
                 title
                 relatedWorks {
                     ... on Work {
@@ -42,6 +47,7 @@ export const getServerSideProps = async ({ params }) => {
                     ... on PreviousWork {
                         id
                         previousWorks {
+                            video
                             title
                             description
                             image1 {
@@ -144,15 +150,24 @@ const single = ({ data }) => {
                 <link rel="icon" href="/favicon.ico" />
                 {parse(seo.fullHead)}</Head>
             <Header />
-            <div className="video-container">
-                <VimeoVideo
-                    verticalVideoUrl={transformVimeoLink(works.video)}
-                    horizontalVideoUrl={transformVimeoLink(works.video)}
-                />
-                <h1 className='working-title'>
-                    {works.title}
-                </h1>
-            </div>
+            {works.hasVideo ?
+                <div className="video-container">
+                    <VimeoVideo
+                        verticalVideoUrl={transformVimeoLink(works.video)}
+                        horizontalVideoUrl={transformVimeoLink(works.video)}
+                    />
+                    <h1 className='working-title'>
+                        {works.title}
+                    </h1>
+                </div>
+                :
+                <div className="header-picture">
+                    <Image src={works.headerPicture.mediaItemUrl} alt={works.headerPicture.featuredImage.altText} fill={true} />
+                    <h1 className='working-title'>
+                        {works.title}
+                    </h1>
+                </div>
+            }
             <div className='work-intro'>
                 <p>{works.intro}</p>
                 <p>{works.intro2}</p>

@@ -21,7 +21,8 @@
     gap: 16px;
 }
 
-.work-images img {
+.work-images img,
+.video-container img {
     position: relative !important;
 }
 
@@ -69,7 +70,9 @@
 }
 
 @media only screen and (min-width: 480px) {
-    .video-container {
+
+    .video-container,
+    .header-picture {
         position: relative;
     }
 
