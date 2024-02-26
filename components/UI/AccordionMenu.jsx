@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaPlus, FaMinus } from 'react-icons/fa'; // You need to install react-icons
+import { FaPlus, FaMinus } from 'react-icons/fa6'; // You need to install react-icons
 import VimeoVideo from './VimeoVideo';
 import { transformVimeoLink } from '@/helpers/vimeo';
 

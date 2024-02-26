@@ -33,7 +33,8 @@
 }
 
 .animated-line {
-    margin-top: 16px;
+    /* margin-top: 16px; */
+    margin-top: 40px;
 }
 
 .network-quote p,
@@ -82,13 +83,14 @@ p {
 
 @media only screen and (max-width: 480px) {
     .fixed-animated-container {
-        margin-top: 20%;
+        margin-top: 50px;
+        /* margin-top: 20%; */
     }
 }
 
 @media only screen and (min-width: 480px) {
     .animated-line {
-        margin: 120px 0;
+        margin: 100px 0 50px;
     }
 
     .animated-line p {
@@ -116,7 +118,7 @@ p {
     .intro p {
         font-size: 46px;
         width: 80%;
-        line-height: 45px;
+        line-height: 53px;
         font-weight: 200;
     }
 
@@ -124,6 +126,10 @@ p {
         display: grid;
         /* Stack subheader and paragraphs vertically */
         grid-template-columns: 50% 50%;
+    }
+
+    .strict-width {
+        width: 70%;
     }
 
     .subheader {

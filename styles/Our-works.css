@@ -32,6 +32,10 @@
     padding: 10px;
 }
 
+.work-title:hover {
+    color: var(--yellow-bg);
+}
+
 @media only screen and (min-width: 480px) {
     .works-section {
         min-height: calc(100dvh);
@@ -46,7 +50,7 @@
         grid-template-columns: 1fr 1fr;
         place-content: center center;
         gap: 16px;
-        row-gap: 10px;
+        row-gap: 26px;
     }
 
     .work-box {
@@ -59,6 +63,15 @@
         margin-top: 10px;
         font-weight: 600;
         font-size: 18px;
+    }
+
+    .work-box-image {
+        overflow: hidden;
+    }
+
+    .work-box-image a img:hover {
+        transform: scale(110%);
+
     }
 
     .selected-clients p {

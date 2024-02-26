@@ -173,9 +173,18 @@ const single = ({ data }) => {
                 <p>{works.intro2}</p>
             </div>
             <div className='work-labels'>
-                <p>{works.category}</p>
-                <p>{works.client}</p>
-                <p>{works.date} | {works.location}</p>
+                <div>
+                    <p className='work-label'>Category</p>
+                    <p>{works.category}</p>
+                </div>
+                <div>
+                    <p className='work-label'>Client</p>
+                    <p>{works.client}</p>
+                </div>
+                <div>
+                    <p className='work-label'>Location</p>
+                    <p>{works.date} | {works.location}</p>
+                </div>
             </div>
             <div className='work-images'>
                 {images.map((img, index) => (

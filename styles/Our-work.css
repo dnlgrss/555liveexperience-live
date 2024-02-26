@@ -5,13 +5,21 @@
     line-height: 60px;
 }
 
+.work-intro p:first-child {
+    font-size: 24px;
+}
+
 .work-labels {
     margin: 50px 0;
-    opacity: 0.6;
 }
 
 .work-labels p {
     margin: 10px 16px;
+    opacity: 0.6;
+}
+
+.work-label {
+    opacity: 1 !important;
 }
 
 .work-images {
@@ -34,6 +42,8 @@
 .previous-edition-section h2,
 .related-projects-section h2 {
     font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 20px
 }
 
 .related-projects-section>div {
@@ -48,6 +58,12 @@
 
 .related-title {
     font-weight: 600;
+
+}
+
+.accordion-title,
+.related-title {
+    font-size: 21px;
 }
 
 /* Accordion */
@@ -78,9 +94,10 @@
 
     .working-title {
         position: absolute;
-        top: 20%;
-        left: 50px;
-        font-size: 62px;
+        top: 80px;
+        /* left: 16px; */
+        font-size: 65px;
+        font-weight: 400;
     }
 
     .work-intro {
@@ -89,6 +106,14 @@
         width: 80%;
         margin: 50px auto;
         gap: 16px;
+    }
+
+    .work-intro p {
+        font-size: 16px;
+    }
+
+    .work-intro p:first-child {
+        font-size: 28px;
     }
 
     .work-labels {
@@ -110,11 +135,20 @@
         margin: 100px auto;
     }
 
-    .previous-edition-section h2,
+    .accordion-title {
+        font-size: 42px;
+        font-weight: 400;
+    }
+
     .related-projects-section h2 {
         font-size: 42px;
         font-weight: 400;
         margin-bottom: 25px;
+    }
+
+    .previous-edition-section h2 {
+        font-size: 21px;
+        font-weight: 600;
     }
 
     .related-title {

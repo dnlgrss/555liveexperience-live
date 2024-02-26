@@ -27,8 +27,22 @@
     margin-bottom: 0;
 }
 
+.social-area a:hover,
+.contact-area a:hover {
+    color: var(--yellow-bg);
+    opacity: 1;
+}
+
 .enquiries {
     margin: 0 16px;
+}
+
+.contact-grid p {
+    font-size: 18px;
+}
+
+.follow-us-strict {
+    margin-top: 0;
 }
 
 @media only screen and (min-width: 480px) {
@@ -49,7 +63,7 @@
     }
 
     .contact-grid>div:nth-child(2) {
-        justify-self: end;
+        justify-self: start;
     }
 
 

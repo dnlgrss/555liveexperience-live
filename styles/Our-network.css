@@ -10,7 +10,7 @@
 }
 
 .network-quote {
-    margin-bottom: 120px;
+    margin: 30px 0;
 }
 
 /* .animated-word {
@@ -30,7 +30,7 @@
     }
 
     .network-quote p {
-        font-size: 76px;
+        font-size: 65px;
         line-height: 70px;
     }
 

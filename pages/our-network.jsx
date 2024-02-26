@@ -124,9 +124,7 @@ export default function ourNetwork({ data }) {
         <div>
           <h1 className='network-h1'>Our Network</h1>
           <p>Join us in creating shared moments across global fan bases, turning every event into a timeless phenomenon.</p>
-          <p>Get in touch!</p>
           <div className="network-quote">
-
             <p>We are always looking for talented </p>
             <div className="animated-word">
               {currentWord.map(({ char, visible }, index) => (
@@ -138,6 +136,7 @@ export default function ourNetwork({ data }) {
             </div>
             <p>from all over the world.</p>
           </div>
+          <p>Get in touch!</p>
         </div>
         <Credits />
       </div>

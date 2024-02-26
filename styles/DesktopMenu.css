@@ -3,12 +3,14 @@
     display: none;
     position: absolute;
     top: 0;
-    right: 0;
-    padding: 20px;
+    right: -6px;
+    /* padding: 20px;  */
+    padding: 20px 0 20px;
 }
 
 .desktop-menu a {
-    margin-right: 36px;
+    /* margin-right: 36px; */
+    margin-right: 16px;
 }
 
 .desktop-menu-item {
