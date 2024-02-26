@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 // Nextjs
 import Image from 'next/image';
 import Head from 'next/head';
@@ -136,11 +136,57 @@ export const getServerSideProps = async ({ params }) => {
 }
 
 const single = ({ data }) => {
+    const [startPosition, changePositon] = useState()
     const seo = data?.work?.seo
     const { works } = data?.work
     const { relatedWorks } = works
     const { previousWorks } = works
     const images = getImageData(works)
+    // State to store screen width
+    const [screenWidth, setScreenWidth] = useState(null);
+
+    useEffect(() => {
+        // Set initial value
+        setScreenWidth(window.innerWidth);
+
+        // Handler to call on window resize
+        const handleResize = () => {
+            setScreenWidth(window.innerWidth);
+        };
+
+        // Add event listener
+        window.addEventListener('resize', handleResize);
+
+        // Remove event listener on cleanup
+        return () => window.removeEventListener('resize', handleResize);
+    }, []); // Empty array ensures that effect runs only on mount and unmount
+
+    useEffect(() => {
+        if (screenWidth < 480) return; // Skip the scroll logic if not on desktop
+
+        const titleElement = document.querySelector('.working-title');
+        const introElement = document.querySelector('.work-intro');
+        const originalTitlePosition = titleElement.getBoundingClientRect().top + window.scrollY;
+        const stopPosition = introElement.offsetTop - 80; // 20px above the .work-intro
+
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            const titlePosition = originalTitlePosition + scrollPosition;
+
+            if (titlePosition < stopPosition) {
+                titleElement.style.transform = `translateY(${scrollPosition}px)`;
+            } else {
+                titleElement.style.transform = `translateY(${stopPosition - originalTitlePosition}px)`;
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [screenWidth]);
+
 
     return (
         <>

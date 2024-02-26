@@ -93,6 +93,10 @@
     }
 
     .working-title {
+        /* transition: transform 0.2s ease-out; */
+        /* Smooth transition for movement */
+
+
         position: absolute;
         top: 80px;
         /* left: 16px; */
