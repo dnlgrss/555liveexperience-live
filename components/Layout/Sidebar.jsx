@@ -7,8 +7,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         <div className={`sidebar ${isOpen ? 'open' : ''}`}>
             <div className="menu">
                 <Link href="/why-us"><p className="menu-item">Why us?</p></Link>
-                <Link href="/our-works"> <p className="menu-item" style={{ lineHeight: '65px' }}>Our <br /> Works</p></Link>
-                <Link href="/our-network"><p className="menu-item shorter" style={{ lineHeight: '65px' }}>Our <br /> Network</p></Link>
+                <Link href="/our-works"> <p className="menu-item" style={{ lineHeight: '55px' }}>Our <br /> Works</p></Link>
+                <Link href="/our-network"><p className="menu-item shorter" style={{ lineHeight: '55px' }}>Our <br /> Network</p></Link>
                 <Link href="/contacts"><p className="menu-item no-line">Contacts</p></Link>
             </div>
             <div className="social-media">

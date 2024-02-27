@@ -43,11 +43,13 @@ const AccordionMenu = ({ previousWorks }) => {
                 <div key={event.id} className="accordion-item" style={{ opacity: openItemId === event.id ? 1 : 0.6 }}>
                     <div className="accordion-title" onClick={() => hasExtraData(event.previousWorks) && toggleItem(event.id)}>
                         {event.previousWorks.title}
-                        {screenWidth < 480 ?
-                            hasExtraData(event.previousWorks) && (openItemId === event.id ? <Image src={MinusBlack} style={{ width: '30px' }} alt='minus icon' /> : <Image src={PlusBlack} style={{ width: '30px' }} alt='plus icon' />)
-                            :
-                            hasExtraData(event.previousWorks) && (openItemId === event.id ? <Image src={MinusWhite} style={{ width: '30px', height: '30px' }} alt='minus icon' /> : <Image src={PlusWhite} style={{ width: '30px', height: '30px' }} alt='plus icon' />)
-                        }
+                        <div>
+                            {screenWidth < 480 ?
+                                hasExtraData(event.previousWorks) && (openItemId === event.id ? <Image src={MinusBlack} style={{ width: '30px', fontSize: '20px' }} alt='minus icon' /> : <Image src={PlusBlack} style={{ width: '30px', fontSize: '20px' }} alt='plus icon' />)
+                                :
+                                hasExtraData(event.previousWorks) && (openItemId === event.id ? <Image src={MinusWhite} style={{ width: '30px', height: '30px', fontSize: '20px' }} alt='minus icon' /> : <Image src={PlusWhite} style={{ width: '30px', height: '30px' }} alt='plus icon' />)
+                            }
+                        </div>
                     </div>
                     {openItemId === event.id && (
                         <div className="accordion-content">
