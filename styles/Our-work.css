@@ -88,9 +88,8 @@
 
 @media only screen and (min-width: 480px) {
 
-    .video-container,
-    .header-picture {
-        position: relative;
+    .video-container {
+        margin-bottom: 100px !important;
     }
 
     .working-title {
