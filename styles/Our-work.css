@@ -7,6 +7,7 @@
 
 .work-intro p:first-child {
     font-size: 24px;
+    line-height: 32px;
 }
 
 .work-labels {
@@ -14,7 +15,7 @@
 }
 
 .work-labels p {
-    margin: 10px 16px;
+    margin: 0px 16px;
     opacity: 0.6;
 }
 
@@ -69,7 +70,7 @@
 /* Accordion */
 .accordion-item {
     border-bottom: 1px solid #ccc;
-    margin: 10px;
+    margin: 10px 10px 10px 0;
     margin-bottom: 5px;
     padding-bottom: 10px;
 }
@@ -93,10 +94,6 @@
     }
 
     .working-title {
-        /* transition: transform 0.2s ease-out; */
-        /* Smooth transition for movement */
-
-
         position: absolute;
         top: 80px;
         /* left: 16px; */

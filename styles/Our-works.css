@@ -17,6 +17,7 @@
 
 .work-box-image img {
     position: relative !important;
+    transition: transform 0.3s ease-in-out;
 }
 
 .selected-clients-logos {
@@ -71,7 +72,6 @@
 
     .work-box-image a img:hover {
         transform: scale(110%);
-
     }
 
     .selected-clients p {
