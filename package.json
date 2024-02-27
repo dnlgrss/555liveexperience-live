@@ -21,6 +21,7 @@
     "sharp": "^0.33.2"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "eslint": "^8",
     "eslint-config-next": "13.5.6"
   }

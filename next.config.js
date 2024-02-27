@@ -10,7 +10,7 @@ const nextConfig = {
         hostname: 'vault.555liveexperience.com',
       },
     ],
-  }
+  },
 }
 
 export default nextConfig
