@@ -146,6 +146,30 @@ const single = ({ data }) => {
     const [screenWidth, setScreenWidth] = useState(null);
 
     useEffect(() => {
+        const header = document.querySelector('.header'); // Adjust the selector as needed
+
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                header.classList.remove('transparent');
+                // header.classList.add('black');
+            } else {
+                // header.classList.remove('black');
+                header.classList.add('transparent');
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Initial class assignment
+        handleScroll();
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+
+    useEffect(() => {
         // Set initial value
         setScreenWidth(window.innerWidth);
 
