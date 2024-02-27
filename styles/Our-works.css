@@ -37,6 +37,11 @@
     color: var(--yellow-bg);
 }
 
+.work-title {
+    font-weight: 600;
+    font-size: 16px;
+}
+
 @media only screen and (min-width: 480px) {
     .works-section {
         min-height: calc(100dvh);

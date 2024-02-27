@@ -2,8 +2,8 @@
     position: fixed;
     top: 0;
     /* Start off the screen */
-    right: -75%;
-    width: 75%;
+    right: calc(-100vw + 112px);
+    width: calc(100vw - 112px);
     height: 100%;
     /* Or any color you prefer */
     background-color: var(--yellow-bg);

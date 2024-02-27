@@ -47,6 +47,10 @@
     margin-bottom: 20px
 }
 
+.related-projects-section h2 {
+    font-size: 20px;
+}
+
 .related-projects-section>div {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -57,14 +61,15 @@
     position: relative !important;
 }
 
-.related-title {
-    font-weight: 600;
 
+
+.accordion-title {
+    font-size: 21px;
 }
 
-.accordion-title,
 .related-title {
-    font-size: 21px;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 /* Accordion */
