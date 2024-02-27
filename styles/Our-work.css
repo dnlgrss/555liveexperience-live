@@ -101,6 +101,10 @@
         font-weight: 400;
     }
 
+    .work-labels p {
+        margin: 0;
+    }
+
     .work-intro {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -111,6 +115,7 @@
 
     .work-intro p {
         font-size: 16px;
+        margin-left: 0;
     }
 
     .work-intro p:first-child {

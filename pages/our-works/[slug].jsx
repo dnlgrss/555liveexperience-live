@@ -151,9 +151,7 @@ const single = ({ data }) => {
         const handleScroll = () => {
             if (window.scrollY > 0) {
                 header.classList.remove('transparent');
-                // header.classList.add('black');
             } else {
-                // header.classList.remove('black');
                 header.classList.add('transparent');
             }
         };
