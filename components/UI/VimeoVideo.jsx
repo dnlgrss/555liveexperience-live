@@ -19,7 +19,7 @@ const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isHome = false }) =>
         // Remove event listener on cleanup
         return () => window.removeEventListener('resize', handleResize);
     }, []); // Empty array ensures that effect runs only on mount and unmount
-    console.log(isHome);
+
     const videoUrl = screenWidth > 480 ? horizontalVideoUrl : verticalVideoUrl;
 
     const renderComponent = () => {

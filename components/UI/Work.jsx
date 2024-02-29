@@ -9,7 +9,7 @@ const Work = ({ single, slug }) => {
     const [isLoading, setIsLoading] = useState(true);
 
     return (
-        <div key={single.id} className='work-box'>
+        <div className='work-box'>
             <div className='work-box-image'>
                 <Link href={`/${slug}/${single.slug}`}>
                     {/* Show loader when image is loading */}

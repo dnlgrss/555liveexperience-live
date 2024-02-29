@@ -99,6 +99,11 @@
     margin-top: 10px;
 }
 
+.related-project:hover+.related-title,
+.related-title:hover {
+    color: var(--yellow-bg)
+}
+
 @media only screen and (min-width: 480px) {
 
     .video-container {
@@ -167,6 +172,19 @@
     .previous-edition-section h2 {
         font-size: 21px;
         font-weight: 600;
+    }
+
+    .related-project {
+        overflow: hidden;
+    }
+
+    .related-project img {
+        position: relative !important;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .related-project a img:hover {
+        transform: scale(110%);
     }
 
     .related-title {

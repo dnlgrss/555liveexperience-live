@@ -113,9 +113,9 @@ export default function ourWorks({ data }) {
                     <h1 className='network-h1'>Our Works</h1>
                     <div className="works-list">
                         {
-                            works.map((single, i) =>
-                                <Suspense fallback={<Loader />}>
-                                    <Work single={single} slug={data.page.slug} key={single.id} />
+                            works.map((single) =>
+                                <Suspense fallback={<Loader />} key={single.id}>
+                                    <Work single={single} slug={data.page.slug} />
                                 </Suspense>
                             )
                         }
@@ -125,9 +125,9 @@ export default function ourWorks({ data }) {
                         <div className="selected-clients-logos">
                             {
                                 clients.map((single, i) =>
-                                    <Suspense fallback={<Loader />}>
+                                    <Suspense fallback={<Loader />} key={i}>
                                         <div className='selected-clients-logos-image'>
-                                            <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} key={i} />
+                                            <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} />
                                         </div>
                                     </Suspense>
                                 )
