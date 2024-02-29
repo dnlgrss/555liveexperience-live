@@ -25,7 +25,7 @@ const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isHome = false }) =>
     const renderComponent = () => {
         if (isHome) {
             return (
-                <div style={{ padding: '56.25% 0 0 0', position: 'relative', height: '100dvh', margin: '0 auto', width: 'calc(100dvw - 32px)' }}>)
+                <div style={{ padding: '56.25% 0 0 0', position: 'relative', height: '100dvh', margin: '0 auto', width: 'calc(100dvw - 32px)' }}>
                     <iframe
                         src={`${videoUrl}?autoplay=1&loop=1&muted=1&controls=0&sidedock=0&title=0`}
                         style={{
