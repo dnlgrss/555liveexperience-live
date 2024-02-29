@@ -15,6 +15,7 @@ import parse from 'html-react-parser';
 import VimeoVideo from '@/components/UI/VimeoVideo';
 import { transformVimeoLink } from '@/helpers/vimeo';
 import { getImageData } from '@/helpers/images';
+import RelatedProject from '@/components/UI/RelatedProject';
 
 export const getServerSideProps = async ({ params }) => {
     const { slug } = params
@@ -36,6 +37,7 @@ export const getServerSideProps = async ({ params }) => {
                         slug
                         works {
                             title
+                            shortTitle
                             featuredImage{
                             altText
                             mediaItemUrl
@@ -96,6 +98,22 @@ export const getServerSideProps = async ({ params }) => {
                     mediaItemUrl
                 }
                 image4 {
+                    altText
+                    mediaItemUrl
+                }
+                image5 {
+                    altText
+                    mediaItemUrl
+                }
+                image6 {
+                    altText
+                    mediaItemUrl
+                }
+                image7 {
+                    altText
+                    mediaItemUrl
+                }
+                image8 {
                     altText
                     mediaItemUrl
                 }
@@ -190,6 +208,7 @@ const single = ({ data }) => {
         const introElement = document.querySelector('.work-intro');
         const originalTitlePosition = titleElement.getBoundingClientRect().top + window.scrollY;
         const stopPosition = introElement.offsetTop - 80; // 20px above the .work-intro
+        // const stopPosition = introElement.offsetTop - 80; // 20px above the .work-intro
 
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
@@ -219,7 +238,7 @@ const single = ({ data }) => {
                 {parse(seo.fullHead)}</Head>
             <Header />
             {works.hasVideo ?
-                <div className="video-container">
+                <>
                     <VimeoVideo
                         verticalVideoUrl={transformVimeoLink(works.video)}
                         horizontalVideoUrl={transformVimeoLink(works.video)}
@@ -227,10 +246,10 @@ const single = ({ data }) => {
                     <h1 className='working-title'>
                         {works.title}
                     </h1>
-                </div>
+                </>
                 :
                 <div className="header-picture">
-                    <Image src={works.headerPicture.mediaItemUrl} alt={works.headerPicture.featuredImage.altText} fill={true} />
+                    <Image src={works.headerPicture.mediaItemUrl} alt={works.headerPicture.altText} layout='fill' objectFit='cover' />
                     <h1 className='working-title'>
                         {works.title}
                     </h1>
@@ -273,14 +292,7 @@ const single = ({ data }) => {
                 <div>
                     {!!relatedWorks && relatedWorks.map(work => (
                         <div className='related-projects' key={work.slug}>
-                            <div className='related-project'>
-                                <Link href={`${work.slug}`}>
-                                    <Image src={work.works.featuredImage.mediaItemUrl} alt={work.works.featuredImage.altText} fill={true} />
-                                </Link>
-                                <Link href={`${work.slug}`} className='related-title'>
-                                    {work.works.title}
-                                </Link>
-                            </div>
+                            <RelatedProject work={work} />
                         </div>
                     ))}
                 </div>

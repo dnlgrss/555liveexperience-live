@@ -110,8 +110,6 @@ export default function ourWorks({ data }) {
             <Header />
             <div className="works-section">
                 <div>
-
-
                     <h1 className='network-h1'>Our Works</h1>
                     <div className="works-list">
                         {

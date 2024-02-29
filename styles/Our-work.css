@@ -1,3 +1,11 @@
+.header-picture {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    /* overflow: hidden; */
+    margin-bottom: 100px;
+}
+
 .working-title {
     font-weight: 400;
     font-size: 56px;
