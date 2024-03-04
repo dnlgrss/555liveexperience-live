@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
+// Nextjs
+import Image from 'next/image'
+// Icons
 import { FaPlus, FaMinus } from 'react-icons/fa6'; // You need to install react-icons
 import PlusWhite from 'public/assets/img/icon/PLUS_white.svg'
 import PlusBlack from 'public/assets/img/icon/PLUS_black.svg'
 import MinusWhite from 'public/assets/img/icon/MINUS_white.svg'
 import MinusBlack from 'public/assets/img/icon/MINUS_black.svg'
+// Components
 import VimeoVideo from './VimeoVideo';
-import Image from 'next/image'
+// Helpers
 import { transformVimeoLink } from '@/helpers/vimeo';
+import { getImageData } from '@/helpers/images';
 
 const AccordionMenu = ({ previousWorks }) => {
     const [openItemId, setOpenItemId] = useState(null);
@@ -57,12 +62,20 @@ const AccordionMenu = ({ previousWorks }) => {
                                 <VimeoVideo
                                     verticalVideoUrl={transformVimeoLink(event.previousWorks.video)}
                                     horizontalVideoUrl={transformVimeoLink(event.previousWorks.video)}
+                                    isAccordion={true}
                                 />
                             }
                             {event.previousWorks.description && <p>{event.previousWorks.description}</p>}
-                            {event.previousWorks.image1 && (
-                                <img src={event.previousWorks.image1.mediaItemUrl} alt={event.previousWorks.image1.altText} />
-                            )}
+                            <div className="accordion-image-container">
+                                {event.previousWorks.image1 && getImageData(event.previousWorks).map((img, index) => (
+                                    <Image
+                                        key={index}
+                                        src={img.url}
+                                        alt={img.alt}
+                                        fill={true}
+                                    />
+                                ))}
+                            </div>
                             {/* Add more fields if necessary */}
                         </div>
                     )}

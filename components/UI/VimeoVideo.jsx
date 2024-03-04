@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isHome = false }) => {
+const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isAccordion = false, isHome = false }) => {
     // State to store screen width
     const [screenWidth, setScreenWidth] = useState(null);
 
@@ -21,6 +21,12 @@ const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isHome = false }) =>
     }, []); // Empty array ensures that effect runs only on mount and unmount
 
     const videoUrl = screenWidth > 480 ? horizontalVideoUrl : verticalVideoUrl;
+    const marginWork = () => {
+        if (isAccordion) {
+            return screenWidth < 480 ? '0 auto 16px auto' : '0 auto 16px auto'
+        }
+        return screenWidth < 480 ? '0 auto 16px auto' : '0 auto 110px auto'
+    }
 
     const renderComponent = () => {
         if (isHome) {
@@ -42,10 +48,7 @@ const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isHome = false }) =>
             )
         } else {
             return (
-                <div style={{
-                    padding: '56.25% 0 0 0', position: 'relative', maxHeight: '100dvh', margin: '0 auto 110px auto', width: 'auto', objectFit: 'cover'
-                }
-                }>
+                <div style={{ padding: '56.25% 0 0 0', position: 'relative', maxHeight: '100dvh', margin: `${marginWork()}`, width: 'auto', objectFit: 'cover' }}>
                     <iframe
                         src={`${videoUrl}?autoplay=1&loop=1&muted=1&controls=0&sidedock=0&title=0`}
                         style={{

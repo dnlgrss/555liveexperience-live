@@ -249,7 +249,8 @@ const single = ({ data }) => {
                 </>
                 :
                 <div className="header-picture">
-                    <Image src={works.headerPicture.mediaItemUrl} alt={works.headerPicture.altText} layout='fill' objectFit='cover' />
+                    {/* <Image src={works.headerPicture.mediaItemUrl} alt={works.headerPicture.altText} style={{ layout: 'fill', objectFit: 'cover' }} /> */}
+                    <Image src={works.headerPicture.mediaItemUrl} alt={works.headerPicture.altText} style={{ layout: 'fill', objectFit: 'cover' }} fill={true} />
                     <h1 className='working-title'>
                         {works.title}
                     </h1>
