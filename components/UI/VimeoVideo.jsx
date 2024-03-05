@@ -23,7 +23,7 @@ const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isAccordion = false,
     const videoUrl = screenWidth > 480 ? horizontalVideoUrl : verticalVideoUrl;
     const marginWork = () => {
         if (isAccordion) {
-            return screenWidth < 480 ? '0 auto 16px auto' : '0 auto 16px auto'
+            return screenWidth < 480 ? '0 auto 16px auto' : '0 auto 50px auto'
         }
         return screenWidth < 480 ? '0 auto 16px auto' : '0 auto 110px auto'
     }

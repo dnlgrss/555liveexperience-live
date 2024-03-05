@@ -104,7 +104,7 @@
 .accordion-image-container {
     display: grid;
     row-gap: 16px;
-    margin-bottom: 6px;
+    margin-bottom: 40px;
 }
 
 .accordion-image-container img {

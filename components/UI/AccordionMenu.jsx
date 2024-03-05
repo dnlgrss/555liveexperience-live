@@ -58,6 +58,21 @@ const AccordionMenu = ({ previousWorks }) => {
                     </div>
                     {openItemId === event.id && (
                         <div className="accordion-content">
+                            {event.previousWorks.description && <p>{event.previousWorks.description}</p>}
+                            <div className='work-labels'>
+                                <div>
+                                    <p className='work-label'>Category</p>
+                                    <p>{event.previousWorks.category}</p>
+                                </div>
+                                <div>
+                                    <p className='work-label'>Client</p>
+                                    <p>{event.previousWorks.client}</p>
+                                </div>
+                                <div>
+                                    <p className='work-label'>Location</p>
+                                    <p>{event.previousWorks.date} | {event.previousWorks.location}</p>
+                                </div>
+                            </div>
                             {event.previousWorks.video &&
                                 <VimeoVideo
                                     verticalVideoUrl={transformVimeoLink(event.previousWorks.video)}
@@ -65,7 +80,6 @@ const AccordionMenu = ({ previousWorks }) => {
                                     isAccordion={true}
                                 />
                             }
-                            {event.previousWorks.description && <p>{event.previousWorks.description}</p>}
                             <div className="accordion-image-container">
                                 {event.previousWorks.image1 && getImageData(event.previousWorks).map((img, index) => (
                                     <Image

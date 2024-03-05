@@ -52,6 +52,10 @@ export const getServerSideProps = async ({ params }) => {
                             video
                             title
                             description
+                            category
+                            client
+                            location
+                            date
                             image1 {
                                 altText
                                 mediaItemUrl
