@@ -137,7 +137,7 @@ export default function whyUs({ data }) {
             <p className='subheader'>Our approach</p>
             <div className='strict-width'>
               <p>We create live shows through a creative approach reflecting the use of the best technological solutions to ensure the maximum optimisation on assets and experiences.</p>
-              <p>We are specialised in Music-Industry – Large Scale Sport Events – Public Events – Corporate Events – Live Broadcasted Events – Brand Activations.</p>
+              {/* <p>We are specialised in Music-Industry – Large Scale Sport Events – Public Events – Corporate Events – Live Broadcasted Events – Brand Activations.</p> */}
             </div>
           </div>
           <div>

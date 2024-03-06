@@ -124,6 +124,7 @@ export default function ourNetwork({ data }) {
         <div>
           <h1 className='network-h1'>Our Network</h1>
           <p>Join us in creating shared moments across global fan bases, turning every event into a timeless phenomenon.</p>
+          <p>We are specialised in Music-Industry – Large Scale Sport Events – Public Events – Corporate Events – Live Broadcasted Events – Brand Activations.</p>
           <div className="network-quote">
             <p>We are always looking for talented </p>
             <div className="animated-word">
