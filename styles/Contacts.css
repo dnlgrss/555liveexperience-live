@@ -3,7 +3,7 @@
 .address-area p,
 .social-area a {
     margin: 0 16px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .contact-area a,
@@ -35,10 +35,6 @@
 
 .enquiries {
     margin: 0 16px;
-}
-
-.contact-grid p {
-    font-size: 18px;
 }
 
 .follow-us-strict {

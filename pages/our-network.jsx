@@ -123,21 +123,23 @@ export default function ourNetwork({ data }) {
       <div className="network-page">
         <div>
           <h1 className='network-h1'>Our Network</h1>
-          <p className='network-intro-p'>We are specialised in Music-Industry – Large Scale Sport Events – Public Events – Corporate Events – Live Broadcasted Events – Brand Activations. Join us in creating shared moments across global fan bases, turning every event into a timeless phenomenon.</p>
-          <div className="network-quote">
-            <p>We are always  </p>
-            <p>looking for talented</p>
-            <div className="animated-word">
-              {currentWord.map(({ char, visible }, index) => (
-                <p key={index} style={{ visibility: visible ? 'visible' : 'hidden', height: `${screenWidth < 480 ? '48px' : '73px'}` }}>
-                  {/* <p key={index} style={{ visibility: visible ? 'visible' : 'hidden', fontFamily: "'Marchellia', sans-serif", height: '49px', paddingTop: '7px' }}> */}
-                  {char === ' ' ? '\u00A0' : char}
-                </p>
-              ))}
+          <div className="our-network-container">
+            <p className='network-intro-p'>We are specialised in Music-Industry – Large Scale Sport Events – Public Events – Corporate Events – Live Broadcasted Events – Brand Activations. Join us in creating shared moments across global fan bases, turning every event into a timeless phenomenon.</p>
+            <div className="network-quote">
+              <p>We are always  </p>
+              <p>looking for talented</p>
+              <div className="animated-word">
+                {currentWord.map(({ char, visible }, index) => (
+                  <p key={index} style={{ visibility: visible ? 'visible' : 'hidden', height: `${screenWidth < 480 ? '48px' : '73px'}` }}>
+                    {/* <p key={index} style={{ visibility: visible ? 'visible' : 'hidden', fontFamily: "'Marchellia', sans-serif", height: '49px', paddingTop: '7px' }}> */}
+                    {char === ' ' ? '\u00A0' : char}
+                  </p>
+                ))}
+              </div>
+              <p>from all over the world.</p>
             </div>
-            <p>from all over the world.</p>
+            <p>Get in touch!</p>
           </div>
-          <p>Get in touch!</p>
         </div>
         <Credits />
       </div>

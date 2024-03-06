@@ -121,7 +121,7 @@ export default function whyUs({ data }) {
         {/* <div className="fixed-animated-container" style={screenWidth < 480 && { position: 'absolute', top: '50%' }}> */}
         <div className="why-us-container" >
           <div className="intro">
-            <p>We are the architects of extraordinary sports experiences, globally active with a focus on Europe and the Middle East, and headquartered in Belgium, KSA, and Dubai.</p>
+            <p>We are the architects of extraordinary sports experiences, globally active with a focus on Europe and the Middle East, and headquartered in Dubai, Riyadh, and Brussels.</p>
           </div>
           <div className="main-text">
             <div>
