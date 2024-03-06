@@ -49,7 +49,12 @@ export const getServerSideProps = async ({ params }) => {
                     ... on PreviousWork {
                         id
                         previousWorks {
+                            hasVideo
                             video
+                            headerImage {
+                                altText
+                                mediaItemUrl
+                            }
                             title
                             description
                             category

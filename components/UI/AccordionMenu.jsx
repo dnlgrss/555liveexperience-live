@@ -58,6 +58,18 @@ const AccordionMenu = ({ previousWorks }) => {
                     </div>
                     {openItemId === event.id && (
                         <div className="accordion-content">
+                            {event.previousWorks.hasVideo ?
+                                event.previousWorks.video &&
+                                <VimeoVideo
+                                    verticalVideoUrl={transformVimeoLink(event.previousWorks.video)}
+                                    horizontalVideoUrl={transformVimeoLink(event.previousWorks.video)}
+                                    isAccordion={true}
+                                />
+                                :
+                                <div className="header-picture-accordion">
+                                    <Image src={event.previousWorks.headerImage.mediaItemUrl} alt={event.previousWorks.headerImage.altText} fill={true} />
+                                </div>
+                            }
                             {event.previousWorks.description && <p>{event.previousWorks.description}</p>}
                             <div className='work-labels'>
                                 <div>
@@ -73,13 +85,6 @@ const AccordionMenu = ({ previousWorks }) => {
                                     <p>{event.previousWorks.date} | {event.previousWorks.location}</p>
                                 </div>
                             </div>
-                            {event.previousWorks.video &&
-                                <VimeoVideo
-                                    verticalVideoUrl={transformVimeoLink(event.previousWorks.video)}
-                                    horizontalVideoUrl={transformVimeoLink(event.previousWorks.video)}
-                                    isAccordion={true}
-                                />
-                            }
                             <div className="accordion-image-container">
                                 {event.previousWorks.image1 && getImageData(event.previousWorks).map((img, index) => (
                                     <Image
@@ -90,7 +95,6 @@ const AccordionMenu = ({ previousWorks }) => {
                                     />
                                 ))}
                             </div>
-                            {/* Add more fields if necessary */}
                         </div>
                     )}
                 </div>

@@ -50,6 +50,10 @@
     margin: 16px;
 }
 
+.header-picture-accordion img {
+    position: relative !important;
+}
+
 .previous-edition-section h2,
 .related-projects-section h2 {
     font-weight: 600;
@@ -101,10 +105,18 @@
     margin-top: 10px;
 }
 
+.accordion-content>p {
+    margin: 16px 0;
+}
+
 .accordion-image-container {
     display: grid;
     row-gap: 16px;
     margin-bottom: 40px;
+}
+
+.accordion-content .work-labels p {
+    margin: 0;
 }
 
 .accordion-image-container img {
