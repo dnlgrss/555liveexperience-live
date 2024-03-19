@@ -138,4 +138,8 @@
         justify-content: end;
         margin-right: 140px;
     }
+
+    .logo {
+        top: 2px;
+    }
 }

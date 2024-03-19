@@ -56,6 +56,11 @@
         transition: background-color 0.3s ease-in-out;
     }
 
+    .logo {
+        /* margin-top: 10px; */
+        top: 10 !important;
+    }
+
     .transparent {
         background-color: transparent;
     }
