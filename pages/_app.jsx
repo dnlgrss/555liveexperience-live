@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'; // DEV 2.0
 // Apollo
 import { ApolloProvider } from '@apollo/client/react'
+import { loadErrorMessages, loadDevMessages } from "@apollo/client/dev";
 import { client } from '@/helpers/apollo'
 // Components
 import DevelopmentPage from '@/components/Layout/DevelopmentPage'
@@ -56,6 +57,14 @@ export default function App({ Component, pageProps }) {
       router.events.off('routeChangeError', handleComplete);
     };
   }, [router]);
+
+
+
+  if (isDevelopment) {
+    // Adds messages only in a dev environment
+    loadDevMessages();
+    loadErrorMessages();
+  }
 
   if (isDevelopment) {
     // Render maintainance page

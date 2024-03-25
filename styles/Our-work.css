@@ -20,8 +20,14 @@
     line-height: 32px;
 }
 
-.work-labels {
+.work-labels,
+.accordion-labels {
     margin: 50px 0;
+}
+
+.accordion-labels div p,
+.accordion-grid p {
+    margin: 0;
 }
 
 .work-labels p {
@@ -69,13 +75,17 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
+    place-content: center center;
+}
+
+.related-box {
+    display: flex;
+    flex-direction: column;
 }
 
 .related-project img {
     position: relative !important;
 }
-
-
 
 .accordion-title {
     font-size: 21px;
@@ -99,6 +109,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.no-linker {
+    cursor: default;
 }
 
 .accordion-content {
@@ -162,11 +176,28 @@
         font-size: 28px;
     }
 
+    .accordion-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 50px;
+    }
+
+    .accordion-grid p {
+        margin: 0;
+    }
+
     .work-labels {
-        width: 80%;
         margin: 50px auto;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        width: 80%;
+    }
+
+    .accordion-labels {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin: 0 30%;
     }
 
     .work-images {
@@ -203,6 +234,12 @@
         font-weight: 600;
     }
 
+    .related-box {
+        height: 100%;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
     .related-project {
         overflow: hidden;
     }
@@ -218,6 +255,7 @@
 
     .related-title {
         font-size: 18px;
+        margin-top: 10px;
     }
 
     .related-project:hover+.related-title,

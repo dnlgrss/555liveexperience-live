@@ -116,8 +116,8 @@ export default function Home({ data }) {
         )}
       </div>
       <VimeoVideo
-        verticalVideoUrl="https://player.vimeo.com/video/108883988"
-        horizontalVideoUrl="https://player.vimeo.com/video/260272259"
+        verticalVideoUrl="https://player.vimeo.com/925511156"
+        horizontalVideoUrl="https://player.vimeo.com/925515575"
         isHome={true}
       />
       <div className="circle-quote">

@@ -280,7 +280,7 @@ const single = ({ data }) => {
                 </div>
                 <div>
                     <p className='work-label'>Location</p>
-                    <p>{works.date} | {works.location}</p>
+                    <p>{works.location} | {works.date}</p>
                 </div>
             </div>
             <div className='work-images'>

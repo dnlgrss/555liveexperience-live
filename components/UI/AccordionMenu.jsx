@@ -46,7 +46,7 @@ const AccordionMenu = ({ previousWorks }) => {
         <div>
             {previousWorks.map(event => (
                 <div key={event.id} className="accordion-item" style={{ opacity: openItemId === event.id ? 1 : 0.6 }}>
-                    <div className="accordion-title" onClick={() => hasExtraData(event.previousWorks) && toggleItem(event.id)}>
+                    <div className={`accordion-title ${hasExtraData(event.previousWorks) ? '' : 'no-linker'}`} onClick={() => hasExtraData(event.previousWorks) && toggleItem(event.id)}>
                         {event.previousWorks.title}
                         <div>
                             {screenWidth < 480 ?
@@ -70,20 +70,25 @@ const AccordionMenu = ({ previousWorks }) => {
                                     <Image src={event.previousWorks.headerImage.mediaItemUrl} alt={event.previousWorks.headerImage.altText} fill={true} />
                                 </div>
                             }
-                            {event.previousWorks.description && <p>{event.previousWorks.description}</p>}
-                            <div className='work-labels'>
-                                <div>
-                                    <p className='work-label'>Category</p>
-                                    <p>{event.previousWorks.category}</p>
+                            <div className="accordion-grid">
+                                {screenWidth < 480 &&
+                                    event.previousWorks.description && <p>{event.previousWorks.description}</p>}
+                                <div className='accordion-labels'>
+                                    <div>
+                                        <p className='work-label'>Category</p>
+                                        <p>{event.previousWorks.category}</p>
+                                    </div>
+                                    <div>
+                                        <p className='work-label'>Client</p>
+                                        <p>{event.previousWorks.client}</p>
+                                    </div>
+                                    <div>
+                                        <p className='work-label'>Location</p>
+                                        <p>{event.previousWorks.location} | {event.previousWorks.date} </p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p className='work-label'>Client</p>
-                                    <p>{event.previousWorks.client}</p>
-                                </div>
-                                <div>
-                                    <p className='work-label'>Location</p>
-                                    <p>{event.previousWorks.date} | {event.previousWorks.location}</p>
-                                </div>
+                                {screenWidth > 480 &&
+                                    event.previousWorks.description && <p>{event.previousWorks.description}</p>}
                             </div>
                             <div className="accordion-image-container">
                                 {event.previousWorks.image1 && getImageData(event.previousWorks).map((img, index) => (
