@@ -85,6 +85,7 @@ export default function ourWorks({ data }) {
         // Set initial value
         setScreenWidth(window.innerWidth);
 
+
         // Handler to call on window resize
         const handleResize = () => {
             setScreenWidth(window.innerWidth);
