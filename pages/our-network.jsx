@@ -138,7 +138,7 @@ export default function ourNetwork({ data }) {
               </div>
               <p>from all over the world.</p>
             </div>
-            <p>Get in touch!</p>
+            <p style={{ marginLeft: '20px' }}>Get in touch!</p>
           </div>
         </div>
         <Credits />

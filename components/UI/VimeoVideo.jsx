@@ -31,20 +31,42 @@ const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isAccordion = false,
     const renderComponent = () => {
         if (isHome) {
             return (
-                <div style={{ padding: '56.25% 0 0 0', position: 'relative', height: '100dvh', margin: '0 auto', width: 'calc(100dvw - 32px)' }}>
+
+                <div style={{ padding: '56.25% 0 0 0', position: 'relative', height: 'calc(100dvh - 65px)', margin: '0 auto', width: 'calc(100dvw - 32px)', objectFit: 'cover' }}>
+                    {/* <div style={{ padding: '56.25% 0 0 0', position: 'relative', height: '100dvh', margin: '0 auto', width: 'calc(100dvw - 32px)' }}> */}
                     <iframe
-                        src={`${videoUrl}?autoplay=1&loop=1&muted=1&controls=0&sidedock=0&title=0`}
+                        src={`${videoUrl}`}
+                        // src={`${videoUrl}autoplay=1&loop=1&muted=0&controls=1&sidedock=0&title=0&byline=0&fullscreen=false&pip=0`}
                         style={{
                             position: 'absolute',
                             top: '0',
                             left: '0',
                             width: '100%',
-                            height: '100%',
+                            height: 'calc(100dvh - 65px)',
                             border: '0'
                         }}
+                        title="555 Live Experience"
                         allowFullScreen
                     ></iframe>
                 </div>
+
+                /*
+                                <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
+                                    <iframe
+                                        src="https://player.vimeo.com/video/925515575?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                                        frameborder="0"
+                                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                                        style={{
+                                            position: 'absolute',
+                                            top: '0',
+                                            left: '0',
+                                            width: '100%',
+                                            height: '100 %'
+                                        }}
+                                        title="555 Live Experience">
+                                    </iframe>
+                                </div>
+                */
             )
         } else {
             return (

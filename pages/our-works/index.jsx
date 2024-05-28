@@ -125,7 +125,7 @@ export default function ourWorks({ data }) {
                         <p>Selected Clients</p>
                         <div className="selected-clients-logos">
                             {
-                                clients.map((single, i) =>
+                                [...clients].reverse().map((single, i) =>
                                     <Suspense fallback={<Loader />} key={i}>
                                         <div className='selected-clients-logos-image'>
                                             <Image src={screenWidth < 480 ? single.clients.clientLogoDark.mediaItemUrl : single.clients.clientLogoLight.mediaItemUrl} alt={screenWidth < 480 ? single.clients.clientLogoDark.altText : single.clients.clientLogoLight.altText} fill={true} />

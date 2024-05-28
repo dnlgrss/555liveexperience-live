@@ -57,6 +57,7 @@ export const getServerSideProps = async ({ params }) => {
                             }
                             title
                             description
+                            description2
                             category
                             client
                             location

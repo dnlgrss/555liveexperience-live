@@ -73,6 +73,10 @@ const AccordionMenu = ({ previousWorks }) => {
                             <div className="accordion-grid">
                                 {screenWidth < 480 &&
                                     event.previousWorks.description && <p>{event.previousWorks.description}</p>}
+                                <br />
+                                <br />
+                                {screenWidth < 480 &&
+                                    event.previousWorks.description2 && <p>{event.previousWorks.description2}</p>}
                                 <div className='accordion-labels'>
                                     <div>
                                         <p className='work-label'>Category</p>
@@ -87,8 +91,13 @@ const AccordionMenu = ({ previousWorks }) => {
                                         <p>{event.previousWorks.location} | {event.previousWorks.date} </p>
                                     </div>
                                 </div>
-                                {screenWidth > 480 &&
-                                    event.previousWorks.description && <p>{event.previousWorks.description}</p>}
+                                <div>
+                                    {screenWidth > 480 &&
+                                        event.previousWorks.description && <p>{event.previousWorks.description}</p>}
+                                    <br />
+                                    {screenWidth > 480 &&
+                                        event.previousWorks.description2 && <p>{event.previousWorks.description2}</p>}
+                                </div>
                             </div>
                             <div className="accordion-image-container">
                                 {event.previousWorks.image1 && getImageData(event.previousWorks).map((img, index) => (
