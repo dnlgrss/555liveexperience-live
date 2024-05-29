@@ -5,6 +5,7 @@ import Image from 'next/image';
 // Image
 import LogoBlack from '@/public/assets/img/logo-black-white.svg';
 import LogoWhite from '@/public/assets/img/logo-white-yellow.svg';
+import Icon from '../UI/Icon';
 
 const DevelopmentPage2 = () => {
     // State to store screen width
@@ -36,11 +37,12 @@ const DevelopmentPage2 = () => {
             </Head>
             <div className='development-page'>
                 <div className="logo">
-                    {screenWidth > 480 ? (
+                    {/* {screenWidth > 480 ? (
                         <Image src={LogoWhite} alt='logo' style={{ width: '100px', height: 'auto' }} />
                     ) : (
                         <Image src={LogoBlack} alt='logo' style={{ width: '100px', height: 'auto' }} />
-                    )}
+                    )} */}
+                    <Icon />
                 </div>
                 <div className="maintenance-section2">
                     <div className="white-rec rec1">

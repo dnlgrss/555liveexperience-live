@@ -38,12 +38,12 @@ const SairaSemiCondensed = Saira_Semi_Condensed({
 export default function App({ Component, pageProps }) {
   const [loading, setLoading] = useState(false);
   const router = useRouter() // DEV 2.0
-  const [isDevelopment, setIsDevelopment] = useState(false);
+  // const [isDevelopment, setIsDevelopment] = useState(false);
+  // Set the environment based on the variable
+  // setIsDevelopment(process.env.NEXT_PUBLIC_ENVIRONMENT === 'dev');
+  const isDevelopment = process.env.NEXT_PUBLIC_ENVIRONMENT === 'dev';
 
   useEffect(() => {
-    // Set the environment based on the variable
-    setIsDevelopment(process.env.NEXT_PUBLIC_ENVIRONMENT === 'dev');
-
     const handleStart = () => setLoading(true); // Show loader on route change start
     const handleComplete = () => setLoading(false); // Hide loader on route change complete
 
@@ -58,15 +58,10 @@ export default function App({ Component, pageProps }) {
     };
   }, [router]);
 
-
-
   if (isDevelopment) {
     // Adds messages only in a dev environment
     loadDevMessages();
     loadErrorMessages();
-  }
-
-  if (isDevelopment) {
     // Render maintainance page
     return (
       <main className={SairaSemiCondensed.className}>

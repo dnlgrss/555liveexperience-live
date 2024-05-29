@@ -105,7 +105,7 @@ export default function Home({ data }) {
             </>
             :
             <>
-              <Image src={QuoteDesktop} alt='555 Live Experience - Andretti Quote' className='quote-homepage' />
+              <Image src={QuoteDesktop} alt='555 Live Experience - - Event Management Services' className='quote-homepage' />
             </>
           }
         </div>

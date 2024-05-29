@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+
+# Allow Googlebot to access CSS and JS files
+User-agent: Googlebot
+Allow: .css
+Allow: .js
+
+# Sitemap location
+Sitemap: https://555liveexperience.com/sitemap.xml
