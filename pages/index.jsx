@@ -64,6 +64,7 @@ export default function Home({ data }) {
       setScreenWidth(window.innerWidth);
     };
 
+
     // Add event listener
     window.addEventListener('resize', handleResize);
 
