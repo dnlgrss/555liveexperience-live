@@ -10,7 +10,8 @@ on:
 jobs:
   build:
 
-    runs-on: [self-hosted, 107]
+    runs-on:
+      labels: 107
 
     strategy:
       matrix:

@@ -10,7 +10,8 @@ on:
 jobs:
   build:
 
-    runs-on: [self-hosted, 555liveexperience]
+    runs-on:
+      labels: 555liveexperience
 
     strategy:
       matrix:
