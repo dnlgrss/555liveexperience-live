@@ -28,4 +28,4 @@ jobs:
     - run: echo "${{ secrets.FIVE_LIVE_SECRETS }}" > .env
     - run: npm i
     - run: CI=false npm run build
-    - run: pm2 restart 555liveexperience.com
+    - run: pm2 restart 555liveexperience.com_live
