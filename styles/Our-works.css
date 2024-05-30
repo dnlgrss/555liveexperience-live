@@ -86,7 +86,7 @@
 
     .selected-clients-logos {
         display: grid;
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(6, 1fr);
         place-content: center center;
         /* Check this for sizing logos */
         margin: 0;

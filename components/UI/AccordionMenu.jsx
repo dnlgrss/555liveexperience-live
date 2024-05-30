@@ -73,8 +73,8 @@ const AccordionMenu = ({ previousWorks }) => {
                             <div className="accordion-grid">
                                 {screenWidth < 480 &&
                                     event.previousWorks.description && <p>{event.previousWorks.description}</p>}
-                                <br />
-                                <br />
+                                {screenWidth < 480 && <br />}
+                                {screenWidth < 480 && <br />}
                                 {screenWidth < 480 &&
                                     event.previousWorks.description2 && <p>{event.previousWorks.description2}</p>}
                                 <div className='accordion-labels'>
@@ -88,7 +88,8 @@ const AccordionMenu = ({ previousWorks }) => {
                                     </div>
                                     <div>
                                         <p className='work-label'>Location</p>
-                                        <p>{event.previousWorks.location} | {event.previousWorks.date} </p>
+                                        <p>{event.previousWorks.location}</p>
+                                        {/* | {event.previousWorks.date} */}
                                     </div>
                                 </div>
                                 <div>

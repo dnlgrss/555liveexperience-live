@@ -281,7 +281,8 @@ const single = ({ data }) => {
                 </div>
                 <div>
                     <p className='work-label'>Location</p>
-                    <p>{works.location} | {works.date}</p>
+                    <p>{works.location}</p>
+                    {/* | {works.date} */}
                 </div>
             </div>
             <div className='work-images'>
