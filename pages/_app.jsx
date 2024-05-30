@@ -86,6 +86,7 @@ export default function App({ Component, pageProps }) {
     // ******* DEV 2.0
   }
 
+
   return (
     <ApolloProvider client={client}>
       {/* Conditionally render the Loader component */}
