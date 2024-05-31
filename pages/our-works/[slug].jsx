@@ -12,7 +12,7 @@ import { client } from '@/helpers/apollo';
 import { gql } from '@apollo/client';
 // Parser
 import parse from 'html-react-parser';
-import VimeoVideo from '@/components/UI/VimeoVideo-test';
+import VimeoVideo from '@/components/UI/VimeoVideo';
 import { transformVimeoLink } from '@/helpers/vimeo';
 import { getImageData } from '@/helpers/images';
 import RelatedProject from '@/components/UI/RelatedProject';
