@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isAccordion = false, isHome = false }) => {
     // State to store screen width
     const [screenWidth, setScreenWidth] = useState(null);
+    const [isPlaying, setIsPlaying] = useState(false);
+    const videoRef = useRef(null);
 
     useEffect(() => {
         // Set initial value
@@ -20,6 +22,32 @@ const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isAccordion = false,
         return () => window.removeEventListener('resize', handleResize);
     }, []); // Empty array ensures that effect runs only on mount and unmount
 
+    //Autoplay function
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsPlaying(true);
+                } else {
+                    setIsPlaying(false);
+                }
+            },
+            {
+                threshold: 0.5,
+            }
+        );
+
+        if (videoRef.current) {
+            observer.observe(videoRef.current);
+        }
+
+        return () => {
+            if (videoRef.current) {
+                observer.unobserve(videoRef.current);
+            }
+        };
+    }, [videoRef]);
+
     const videoUrl = screenWidth > 480 ? horizontalVideoUrl : verticalVideoUrl;
     const marginWork = () => {
         if (isAccordion) {
@@ -29,13 +57,14 @@ const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isAccordion = false,
     }
 
     const renderComponent = () => {
+        const autoplay = isPlaying ? 'autoplay=1' : 'autoplay=0';
         if (isHome) {
             return (
 
-                <div style={{ padding: '56.25% 0 0 0', position: 'relative', height: 'calc(100dvh - 65px)', margin: '0 auto', width: 'calc(100dvw - 32px)', objectFit: 'cover' }}>
+                <div ref={videoRef} style={{ padding: '56.25% 0 0 0', position: 'relative', height: 'calc(100dvh - 65px)', margin: '0 auto', width: 'calc(100dvw - 32px)', objectFit: 'cover' }}>
                     {/* <div style={{ padding: '56.25% 0 0 0', position: 'relative', height: '100dvh', margin: '0 auto', width: 'calc(100dvw - 32px)' }}> */}
                     <iframe
-                        src={`${videoUrl}`}
+                        src={`${videoUrl}${autoplay}`}
                         // src={`${videoUrl}autoplay=1&loop=1&muted=0&controls=1&sidedock=0&title=0&byline=0&fullscreen=false&pip=0`}
                         style={{
                             position: 'absolute',
@@ -47,6 +76,7 @@ const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isAccordion = false,
                         }}
                         title="555 Live Experience"
                         allowFullScreen
+                        allow='autoplay'
                     ></iframe>
                 </div>
 
