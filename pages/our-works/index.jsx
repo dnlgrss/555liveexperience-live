@@ -31,7 +31,7 @@ export const getServerSideProps = async () => {
                 title
             }
         }
-        works {
+        works (first: 100) {
             nodes {
                 id
                 slug
@@ -44,7 +44,7 @@ export const getServerSideProps = async () => {
                 }
             }
         }
-        clients {
+        clients (first: 100){
             nodes {
                 clients {
                     title

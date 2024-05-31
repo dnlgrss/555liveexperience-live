@@ -43,7 +43,7 @@ export const getStaticProps = async () => {
 export default function whyUs({ data }) {
   const { seo } = data
 
-  const words = ["a fan-first", "an happiness-first", "a creative", "a production event"];
+  const words = ["a fan-first", "a happiness-first", "a creative", "a event production", "a global", "a technology-first"];
   // const words = ["AN HAPPINESS-FIRST", "A BREAKING BOUNDARIES", "A CREATIVE", "A PRODUCTION EVENT"];
   // const [currentWord, setCurrentWord] = useState(words[0]);
   // const [animation, setAnimation] = useState(0);
@@ -121,14 +121,14 @@ export default function whyUs({ data }) {
         {/* <div className="fixed-animated-container" style={screenWidth < 480 && { position: 'absolute', top: '50%' }}> */}
         <div className="why-us-container" >
           <div className="intro">
-            <p>We are the architects of extraordinary sports experiences, globally active with a focus on Europe and the Middle East, and headquartered in Dubai, Riyadh, and Brussels.</p>
+            <p>We are the architects of exceptional sports & music encounters worldwide, with a primary emphasis in Europe and Middle East from our Head Quarters in Dubai, Riyadh and Brussels.</p>
           </div>
           <div className="main-text">
             <div>
-              <p>With over 6 years of experience in creating live experiences for Formula 1 races worldwide, our fan-first philosophy drives us to create electrifying moments by challenging the status quo.</p>
+              <p>Where technology meets creativity. That is what we provide to our clients and partners through the carefully crafted Master Control Room tailor made for each project. Constant innovation is our most important pursuit: we strive to offer our clients the best program using the newest technologies available on market.</p>
             </div>
             <div>
-              <p>We prioritize fans and their passion, crafting stories where athletes become heroes, complemented by live music, interactive fan zones, and captivating performances. Blending sport with spectacle, each moment becomes unforgettable. Fueled by our seasoned experts and vast network, we ensure flawless details. Additionally, our technical solutions enhance the fan experience for all kinds of events.</p>
+              <p>Our Master Control Room allows us to coordinate every aspect of large-scale shows, including audio control, video content, lighting, cast management and live broadcast. This integration in the one and only MCR allows everyone to access the necessary information and instructions to deliver a flawless, distinctive, and unparalleled experience for our audience. The MCR is the muscle from all our projects allowing our creative team to imagine bigger, better and more spectacular shows.</p>
             </div>
           </div>
         </div>
@@ -146,8 +146,8 @@ export default function whyUs({ data }) {
           <div>
             <p className='subheader'>The Happiness Program</p>
             <div className='strict-width'>
-              <p>The Happiness Program is a comprehensive package that stems from a successful collaboration between the F1 Event team, the local promotor, the team’s hospitality department and the 555-team. Its purpose is to enhance the VIP Paddock Tours Experience. We believe that this extraordinary experience should be earned and reserved exclusively for true F1 superfans.</p>
-              <p>The emotions that overwhelm the lucky ones as they pass through the turnstiles of the paddock are truly magical. The 555 camera crew captivates the whole process and collaborates with the 555 Master Control Room Team so that this magical emotional experience appears on all the screens around the circuit when the daily edits are shown. The impact is truly remarkable.</p>
+              <p>Born from a successful collaboration among various parties, the Happiness Program continues to elevate the VIP Paddock Tour Experience for a select group of superfans, the best ambassadors, the most loyal, the hardcore fans who deserv to be rewarded for their unconditional passion.</p>
+              <p>Originally designed for the Formula 1 superfans, this exclusive experience has now been extended to other events, including football events and music festivals. Emotions run high as superfans enter the Paddock, the locker rooms of the Saudi football team, or the backstage area of a famous DJ set at Tomorrowland, meeting the pilots, mechanics, technicians, and superstars who bring the magic to life. Every moment is captured by the 555 camera crew, while our Master Control Room ensures this enchanting and emotional experience is live fed on screens throughout the venue. This extraordinary opportunity leaves a lasting impact and is a privilege reserved for the most dedicated superfans.</p>
             </div>
           </div>
         </div>

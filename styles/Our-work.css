@@ -30,6 +30,10 @@
     margin: 0;
 }
 
+.greyed-out {
+    opacity: 0.6;
+}
+
 .work-labels p {
     margin: 0px 16px;
     opacity: 0.6;

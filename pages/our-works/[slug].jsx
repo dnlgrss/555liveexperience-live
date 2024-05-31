@@ -61,7 +61,6 @@ export const getServerSideProps = async ({ params }) => {
                             category
                             client
                             location
-                            date
                             image1 {
                                 altText
                                 mediaItemUrl
@@ -86,7 +85,6 @@ export const getServerSideProps = async ({ params }) => {
                 intro
                 category
                 client
-                date
                 featuredImage{
                     altText
                     mediaItemUrl

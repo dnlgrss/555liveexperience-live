@@ -102,7 +102,8 @@ export default function Home({ data }) {
           {screenWidth < 480
             ?
             <>
-              <p className='quote' style={{ fontFamily: "'Marchellia', sans-serif", marginBottom: '56px' }}>“If everything seems under control, you’re not going fast enough.”</p>
+              {/* <p className='quote' style={{ fontFamily: "'Marchellia', sans-serif", marginBottom: '56px' }}>“If everything seems under control, you’re not going fast enough.”</p> */}
+              <Image src={QuoteMobile} alt='555 Live Experience - - Event Management Services' className='quote' />
             </>
             :
             <>

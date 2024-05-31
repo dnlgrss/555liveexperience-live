@@ -80,15 +80,15 @@ const AccordionMenu = ({ previousWorks }) => {
                                 <div className='accordion-labels'>
                                     <div>
                                         <p className='work-label'>Category</p>
-                                        <p>{event.previousWorks.category}</p>
+                                        <p className='greyed-out'>{event.previousWorks.category}</p>
                                     </div>
                                     <div>
                                         <p className='work-label'>Client</p>
-                                        <p>{event.previousWorks.client}</p>
+                                        <p className='greyed-out'>{event.previousWorks.client}</p>
                                     </div>
                                     <div>
                                         <p className='work-label'>Location</p>
-                                        <p>{event.previousWorks.location}</p>
+                                        <p className='greyed-out'>{event.previousWorks.location}</p>
                                         {/* | {event.previousWorks.date} */}
                                     </div>
                                 </div>

@@ -42,7 +42,7 @@ export const getStaticProps = async () => {
 export default function ourNetwork({ data }) {
   const { seo } = data
 
-  const words = ["event experts", "technicians", "professionals", "freelancers", "creatives"];
+  const words = ["professionals", "free-lancers", "creatives", "technicians", "event experts", "performers/artist"];
   // const words = ["EVENT EXPERTS", "TECHNICIANS", "PROFESSIONALS", "FREELANCERS", "CREATIVES"];
   // const [currentWord, setCurrentWord] = useState(words[0]);
   // const [animation, setAnimation] = useState(0);
@@ -124,7 +124,7 @@ export default function ourNetwork({ data }) {
         <div>
           <h1 className='network-h1'>Our Network</h1>
           <div className="our-network-container">
-            <p className='network-intro-p'>We are specialised in Music-Industry – Large Scale Sport Events – Public Events – Corporate Events – Live Broadcasted Events – Brand Activations. Join us in creating shared moments across global fan bases, turning every event into a timeless phenomenon.</p>
+            <p className='network-intro-p'>Enter the world of extraordinary events with us, where we excel in industries like Music, Sports, Corporate, Live Broadcast, Public Events, and Fan Bases. Whether it’s providing mere technical support or crafting captivating shows from inception to execution, we invite you to collaborate with us in delivering unparalleled experiences.</p>
             <div className="network-quote">
               <p>We are always  </p>
               <p>looking for talented</p>
@@ -138,7 +138,7 @@ export default function ourNetwork({ data }) {
               </div>
               <p>from all over the world.</p>
             </div>
-            <p style={{ marginLeft: '20px' }}>Get in touch!</p>
+            <p style={{ marginLeft: '20px' }}>Join us as a team member or hire our services to give your audiences and fans the experience of a lifetime and witness the transformation of every occasion into a timeless moment.</p>
           </div>
         </div>
         <Credits />
