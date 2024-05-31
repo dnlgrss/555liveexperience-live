@@ -77,21 +77,23 @@ const AccordionMenu = ({ previousWorks }) => {
                                 {screenWidth < 480 && <br />}
                                 {screenWidth < 480 &&
                                     event.previousWorks.description2 && <p>{event.previousWorks.description2}</p>}
-                                <div className='accordion-labels'>
-                                    <div>
-                                        <p className='work-label'>Category</p>
-                                        <p className='greyed-out'>{event.previousWorks.category}</p>
+                                {event.previousWorks.description &&
+                                    <div className='accordion-labels'>
+                                        <div>
+                                            <p className='work-label'>Category</p>
+                                            <p className='greyed-out'>{event.previousWorks.category}</p>
+                                        </div>
+                                        <div>
+                                            <p className='work-label'>Client</p>
+                                            <p className='greyed-out'>{event.previousWorks.client}</p>
+                                        </div>
+                                        <div>
+                                            <p className='work-label'>Location</p>
+                                            <p className='greyed-out'>{event.previousWorks.location}</p>
+                                            {/* | {event.previousWorks.date} */}
+                                        </div>
                                     </div>
-                                    <div>
-                                        <p className='work-label'>Client</p>
-                                        <p className='greyed-out'>{event.previousWorks.client}</p>
-                                    </div>
-                                    <div>
-                                        <p className='work-label'>Location</p>
-                                        <p className='greyed-out'>{event.previousWorks.location}</p>
-                                        {/* | {event.previousWorks.date} */}
-                                    </div>
-                                </div>
+                                }
                                 <div>
                                     {screenWidth > 480 &&
                                         event.previousWorks.description && <p>{event.previousWorks.description}</p>}
