@@ -61,7 +61,6 @@ const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isAccordion = false,
         if (isHome) {
             return (
 
-
                 <div ref={videoRef} style={{ padding: '56.25% 0 0 0', position: 'relative', height: 'calc(100dvh - 65px)', margin: '0 auto', width: 'calc(100dvw - 32px)', objectFit: 'cover' }}>
                     {/* <div style={{ padding: '56.25% 0 0 0', position: 'relative', height: '100dvh', margin: '0 auto', width: 'calc(100dvw - 32px)' }}> */}
                     <iframe
