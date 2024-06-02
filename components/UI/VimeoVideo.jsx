@@ -60,8 +60,8 @@ const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isAccordion = false,
         const autoplay = isPlaying ? 'autoplay=1' : 'autoplay=0';
         if (isHome) {
             return (
-                <div ref={videoRef} style={{ padding: '56.25% 0 0 0', position: 'relative', height: `${screenWidth < 480 ? 'calc(100dvh - 125px)' : 'calc(100dvh - 65px)'}`, margin: '0 auto', width: 'calc(100dvw - 32px)', objectFit: 'cover' }}>
-                    {/* <div ref={videoRef} style={{ padding: '56.25% 0 0 0', position: 'relative', height: 'calc(100dvh - 65px)', margin: '0 auto', width: 'calc(100dvw - 32px)', objectFit: 'cover' }}> */}
+                <div ref={videoRef} style={{ padding: '56.25% 0 0 0', position: 'relative', height: `${screenWidth < 480 ? 'calc(100dvh - 125px)' : 'calc(100dvh - 65px)'}`, margin: '0 auto', width: '100%' }}>
+                    {/* <div ref={videoRef} style={{ padding: '56.25% 0 0 0', position: 'relative', height: 'calc(100dvh - 65px)', margin: '0 auto', width: 'calc(100dvw - 32px)', objectFit: 'cover' }}>   width: 'calc(100dvw - 32px)'  */}
                     {/* <div style={{ padding: '56.25% 0 0 0', position: 'relative', height: '100dvh', margin: '0 auto', width: 'calc(100dvw - 32px)' }}> */}
                     <iframe
                         src={`${videoUrl}${autoplay}&muted=1&loop=1`}
