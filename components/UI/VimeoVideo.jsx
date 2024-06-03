@@ -81,7 +81,7 @@ const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isAccordion = false,
         if (isHome) {
             return (
                 // <div ref={videoRef} style={{ padding: '56.25% 0 0 0', position: 'relative', minHeight: `${screenWidth < 480 ? '103lvh' : 'calc(100dvh - 65px)'}`, maxHeight: `${screenWidth < 480 ? '103lvh' : 'calc(100dvh - 65px)'}`, margin: '0 auto', width: `${screenWidth < 480 ? 'calc(100lvw - 36px)' : 'calc(100dvw - 32px)'}` }}>
-                <div ref={videoRef} style={{ padding: '56.25% 0 0 0', position: 'relative', minHeight: `${screenWidth < 480 ? viewportHeight : 'calc(100dvh - 65px)'}`, maxHeight: `${screenWidth < 480 ? viewportHeight : 'calc(100dvh - 65px)'}`, margin: '0 auto', width: `${screenWidth < 480 ? 'calc(100lvw)' : 'calc(100dvw - 32px)'}` }}>
+                <div ref={videoRef} style={{ padding: '56.25% 0 0 0', position: 'relative', minHeight: `${screenWidth < 480 ? viewportHeight + 'px' : 'calc(100dvh - 65px)'}`, maxHeight: `${screenWidth < 480 ? viewportHeight + 'px' : 'calc(100dvh - 65px)'}`, margin: '0 auto', width: `${screenWidth < 480 ? 'calc(100lvw)' : 'calc(100dvw - 32px)'}` }}>
                     {/* <div ref={videoRef} style={{ padding: '56.25% 0 0 0', position: 'relative', minHeight: `${screenWidth < 480 ? 'calc(var(--vh, 1vh) * 100)' : 'calc(100dvh - 65px)'}`, maxHeight: `${screenWidth < 480 ? 'calc(var(--vh, 1vh) * 100)' : 'calc(100dvh - 65px)'}`, margin: '0 auto', width: `${screenWidth < 480 ? 'calc(100lvw)' : 'calc(100dvw - 32px)'}` }}> */}
                     {/* <div ref={videoRef} style={{ padding: '56.25% 0 0 0', position: 'relative', height: `${screenWidth < 480 ? 'calc(100dvh - 125px)' : 'calc(100dvh - 65px)'}`, margin: '0 auto', width: `${screenWidth < 480 ? '100%' : 'calc(100dvw - 32px)'}` }}> */}
                     <iframe
@@ -97,8 +97,8 @@ const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isAccordion = false,
                             // height: 'auto',
                             // minHeight: `${screenWidth < 480 ? '103lvh' : 'calc(100lvh - 65px)'}`,
                             // maxHeight: `${screenWidth < 480 ? '103lvh' : 'calc(100lvh - 65px)'}`,
-                            minHeight: `${screenWidth < 480 ? viewportHeight : 'calc(100lvh - 65px)'}`,
-                            maxHeight: `${screenWidth < 480 ? viewportHeight : 'calc(100lvh - 65px)'}`,
+                            minHeight: `${screenWidth < 480 ? viewportHeight + 'px' : 'calc(100lvh - 65px)'}`,
+                            maxHeight: `${screenWidth < 480 ? viewportHeight + 'px' : 'calc(100lvh - 65px)'}`,
                             // minHeight: `${screenWidth < 480 ? 'calc(var(--vh, 1vh) * 100)' : 'calc(100lvh - 65px)'}`,
                             // maxHeight: `${screenWidth < 480 ? 'calc(var(--vh, 1vh) * 100)' : 'calc(100lvh - 65px)'}`,
                             // height: `${screenWidth < 480 ? 'calc(100dvh - 125px)' : 'calc(100dvh - 65px)'}`,
