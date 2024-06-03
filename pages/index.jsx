@@ -117,11 +117,13 @@ export default function Home({ data }) {
           </div>
         )}
       </div>
-      <VimeoVideo
-        verticalVideoUrl="https://player.vimeo.com/video/925511156?"
-        horizontalVideoUrl="https://player.vimeo.com/video/925515575?"
-        isHome={true}
-      />
+      <div >
+        <VimeoVideo
+          verticalVideoUrl="https://player.vimeo.com/video/925511156?"
+          horizontalVideoUrl="https://player.vimeo.com/video/925515575?"
+          isHome={true}
+        />
+      </div>
       <div className="circle-quote">
         <Image src={CircleQuote} alt='Positive impact on your live experience' />
       </div>
