@@ -73,7 +73,7 @@ const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isAccordion = false,
                             // width: `${screenWidth < 480 ? '100%' : 'calc(100dvw - 32px)'}`,
                             // dvh is jumping window.height shoudn't but hard to use outside useEffect
                             // height: 'auto',
-                            height: `${screenWidth < 480 ? '103lvh' : 'calc(100lvh - 65px)'}`,
+                            minHeight: `${screenWidth < 480 ? '103lvh' : 'calc(100lvh - 65px)'}`,
                             // height: `${screenWidth < 480 ? 'calc(100dvh - 125px)' : 'calc(100dvh - 65px)'}`,
                             border: '0',
                             // margin: '0 auto'
