@@ -4,9 +4,8 @@
 
 .frontpage .container {
     /* margin-top: 40px; */
-    width: 100dvw;
-    height: calc(100dvh - 65px);
-    transform: translateY(-65px);
+    width: 100lvw;
+    height: 100lvh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +33,9 @@
     line-height: 50px;
     text-transform: uppercase;
     margin: 16px;
-    margin-right: 18px;
+    width: calc(100% - 32px);
+    transform: translateY(-65px);
+    /* margin-right: 18px; */
 }
 
 .circle-quote {

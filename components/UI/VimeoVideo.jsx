@@ -60,7 +60,7 @@ const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isAccordion = false,
         const autoplay = isPlaying ? 'autoplay=1' : 'autoplay=0';
         if (isHome) {
             return (
-                <div ref={videoRef} style={{ padding: '56.25% 0 0 0', position: 'relative', height: `${screenWidth < 480 ? '103vh' : 'calc(100dvh - 65px)'}`, margin: '0 auto', width: `${screenWidth < 480 ? 'calc(100dvw - 32px)' : 'calc(100dvw - 32px)'}` }}>
+                <div ref={videoRef} style={{ padding: '56.25% 0 0 0', position: 'relative', height: `${screenWidth < 480 ? '103lvh' : 'calc(100dvh - 65px)'}`, margin: '0 auto', width: `${screenWidth < 480 ? 'calc(100lvw - 36px)' : 'calc(100dvw - 32px)'}` }}>
                     {/* <div ref={videoRef} style={{ padding: '56.25% 0 0 0', position: 'relative', height: `${screenWidth < 480 ? 'calc(100dvh - 125px)' : 'calc(100dvh - 65px)'}`, margin: '0 auto', width: `${screenWidth < 480 ? '100%' : 'calc(100dvw - 32px)'}` }}> */}
                     <iframe
                         src={`${videoUrl}${autoplay}&muted=1&loop=1`}
@@ -69,10 +69,11 @@ const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isAccordion = false,
                             position: 'absolute',
                             top: '0',
                             left: '0',
-                            width: `${screenWidth < 480 ? 'calc(100dvw - 32px)' : 'calc(100dvw - 32px)'}`,
+                            width: `${screenWidth < 480 ? 'calc(100lvw - 36px)' : 'calc(100dvw - 32px)'}`,
                             // width: `${screenWidth < 480 ? '100%' : 'calc(100dvw - 32px)'}`,
                             // dvh is jumping window.height shoudn't but hard to use outside useEffect
-                            height: `${screenWidth < 480 ? '103vh' : 'calc(100dvh - 65px)'}`,
+                            // height: 'auto',
+                            height: `${screenWidth < 480 ? '103lvh' : 'calc(100lvh - 65px)'}`,
                             // height: `${screenWidth < 480 ? 'calc(100dvh - 125px)' : 'calc(100dvh - 65px)'}`,
                             border: '0',
                             // margin: '0 auto'

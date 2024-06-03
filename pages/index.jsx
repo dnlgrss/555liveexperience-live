@@ -103,11 +103,11 @@ export default function Home({ data }) {
             ?
             <>
               {/* <p className='quote' style={{ fontFamily: "'Marchellia', sans-serif", marginBottom: '56px' }}>“If everything seems under control, you’re not going fast enough.”</p> */}
-              <Image src={QuoteMobile} alt='555 Live Experience - - Event Management Services' className='quote' />
+              <Image src={QuoteMobile} alt='555 Live Experience - Event Management Services' className='quote' />
             </>
             :
             <>
-              <Image src={QuoteDesktop} alt='555 Live Experience - - Event Management Services' className='quote-homepage' />
+              <Image src={QuoteDesktop} alt='555 Live Experience - Event Management Services' className='quote-homepage' />
             </>
           }
         </div>
