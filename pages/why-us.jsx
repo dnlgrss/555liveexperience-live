@@ -132,7 +132,7 @@ export default function whyUs({ data }) {
             </div>
           </div>
         </div>
-        <div className="subheaders">
+        {/* <div className="subheaders">
           <div>
             <p className='subheader'>Our approach</p>
             <div className='strict-width'>
@@ -150,7 +150,7 @@ export default function whyUs({ data }) {
               <p>Originally designed for the Formula 1 superfans, this exclusive experience has now been extended to other events, including football events and music festivals. Emotions run high as superfans enter the Paddock, the locker rooms of the Saudi football team, or the backstage area of a famous DJ set at Tomorrowland, meeting the pilots, mechanics, technicians, and superstars who bring the magic to life. Every moment is captured by the 555 camera crew, while our Master Control Room ensures this enchanting and emotional experience is live fed on screens throughout the venue. This extraordinary opportunity leaves a lasting impact and is a privilege reserved for the most dedicated superfans.</p>
             </div>
           </div>
-        </div>
+        </div> */}
         <Credits />
       </div>
     </>

@@ -82,6 +82,7 @@
 
     .selected-clients p {
         font-size: 36px;
+        margin-top: 100px;
     }
 
     .selected-clients-logos {

@@ -39,7 +39,7 @@ const AccordionMenu = ({ previousWorks }) => {
     };
 
     const hasExtraData = (event) => {
-        return event.description || event.image1;
+        return event.description || event.image1 || event.hasVideo;
     };
 
     return (

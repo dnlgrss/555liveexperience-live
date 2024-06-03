@@ -60,7 +60,7 @@ export default function contacts({ data }) {
           <div>
             <p className='enquiries'>For new inquiries contact</p>
             <div className="contact-area">
-              <a href="mailto: hello@555liveexperience.com" className="email">hello@555liveexperience.com</a>
+              <a href="mailto:hello@555liveexperience.com" className="email">hello@555liveexperience.com</a>
               {/* <p className="name">Marc van Sintruyen</p>
               <a href="mailto: marc.vansintruyen@555liveexperience.com" className="email">marc.vansintruyen@555liveexperience.com</a>
               <p className="name">Alexandre Molina</p>

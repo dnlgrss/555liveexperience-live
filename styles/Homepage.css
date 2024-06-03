@@ -3,7 +3,13 @@
 }
 
 .frontpage .container {
-    margin-top: 40px;
+    /* margin-top: 40px; */
+    width: 100dvw;
+    height: calc(100dvh - 65px);
+    transform: translateY(-65px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .scroll-down-link {
@@ -63,11 +69,11 @@
         /* align-items: center; */
     }
 
-    .frontpage .container {
+    /* .frontpage .container {
         width: 70%;
         margin-top: 5%;
         margin-right: 10%;
-    }
+    } */
 
     .frontpage .container p {
         font-size: 5rem;
@@ -75,7 +81,6 @@
     }
 
     .quote-homepage {
-        width: 50%;
-        height: auto;
+        width: 40%;
     }
 }
