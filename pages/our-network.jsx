@@ -124,7 +124,7 @@ export default function ourNetwork({ data }) {
         <div>
           <h1 className='network-h1'>Our Network</h1>
           <div className="our-network-container">
-            <p className='network-intro-p'>Enter the world of extraordinary events with us, where we excel in industries like Music, Sports, Corporate, Live Broadcast, Public Events, and Fan Bases. Whether it’s providing mere technical support or crafting captivating shows from inception to execution, we invite you to collaborate with us in delivering unparalleled experiences.</p>
+            <p className='network-intro-p' style={{ width: '43%' }}>Enter the world of extraordinary events with us, where we excel in industries like Music, Sports, Corporate, Live Broadcast, Public Events, and Fan Bases. Whether it’s providing mere technical support or crafting captivating shows from inception to execution, we invite you to collaborate with us in delivering unparalleled experiences.</p>
             <div className="network-quote">
               <p>We are always  </p>
               <p>looking for talented</p>
@@ -140,12 +140,12 @@ export default function ourNetwork({ data }) {
             </div>
             <div className='subheaders'>
               <div>
-                <p style={{ marginLeft: '20px' }}>Join us as a team member or hire our services to give your audiences and fans the experience of a lifetime and witness the transformation of every occasion into a timeless moment.</p>
+                <p style={{ marginLeft: '20px', width: '85%' }}>Join us as a team member or hire our services to give your audiences and fans the experience of a lifetime and witness the transformation of every occasion into a timeless moment.</p>
               </div>
               <div>
                 <div className='inner-grid'>
                   <p className='subheader' style={{ marginTop: '40px', marginBottom: '0' }}>The Happiness Program</p>
-                  <div>
+                  <div style={{ width: '90%' }}>
                     <p>Born from a successful collaboration among various parties, the Happiness Program continues to elevate the VIP Paddock Tour Experience for a select group of superfans, the best ambassadors, the most loyal, the hardcore fans who deserv to be rewarded for their unconditional passion.</p>
                     <p>Originally designed for the Formula 1 superfans, this exclusive experience has now been extended to other events, including football events and music festivals. Emotions run high as superfans enter the Paddock, the locker rooms of the Saudi football team, or the backstage area of a famous DJ set at Tomorrowland, meeting the pilots, mechanics, technicians, and superstars who bring the magic to life. Every moment is captured by the 555 camera crew, while our Master Control Room ensures this enchanting and emotional experience is live fed on screens throughout the venue. This extraordinary opportunity leaves a lasting impact and is a privilege reserved for the most dedicated superfans.</p>
                   </div>
