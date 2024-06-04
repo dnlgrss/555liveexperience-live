@@ -105,34 +105,37 @@ export default function whyUs({ data }) {
         {parse(seo.fullHead)}
       </Head>
       <Header />
-      <div className="animated-line">
-        <p>We are </p>
-        <div className="animated-word">
-          {currentWord.map(({ char, visible }, index) => (
-            <p key={index} style={{ visibility: visible ? 'visible' : 'hidden', height: `${screenWidth < 480 ? '48px' : '73px'}` }}>
-              {/* <p key={index} style={{ visibility: visible ? 'visible' : 'hidden', fontFamily: "'Marchellia', sans-serif", height: '39px', paddingTop: '7px' }}> */}
-              {char === ' ' ? '\u00A0' : char}
-            </p>
-          ))}
-        </div>
-        <p> agency</p>
-      </div>
-      <div className="fixed-animated-container">
-        {/* <div className="fixed-animated-container" style={screenWidth < 480 && { position: 'absolute', top: '50%' }}> */}
-        <div className="why-us-container" >
-          <div className="intro">
-            <p>We are the architects of exceptional sports & music encounters worldwide, with a primary emphasis in Europe and Middle East from our Head Quarters in Dubai, Riyadh and Brussels.</p>
-          </div>
-          <div className="main-text">
-            <div>
-              <p>Where technology meets creativity. That is what we provide to our clients and partners through the carefully crafted Master Control Room tailor made for each project. Constant innovation is our most important pursuit: we strive to offer our clients the best program using the newest technologies available on market.</p>
+      <div className="why-us-page">
+        <div>
+          <div className="animated-line">
+            <p>We are </p>
+            <div className="animated-word">
+              {currentWord.map(({ char, visible }, index) => (
+                <p key={index} style={{ visibility: visible ? 'visible' : 'hidden', height: `${screenWidth < 480 ? '48px' : '73px'}` }}>
+                  {/* <p key={index} style={{ visibility: visible ? 'visible' : 'hidden', fontFamily: "'Marchellia', sans-serif", height: '39px', paddingTop: '7px' }}> */}
+                  {char === ' ' ? '\u00A0' : char}
+                </p>
+              ))}
             </div>
-            <div>
-              <p>Our Master Control Room allows us to coordinate every aspect of large-scale shows, including audio control, video content, lighting, cast management and live broadcast. This integration in the one and only MCR allows everyone to access the necessary information and instructions to deliver a flawless, distinctive, and unparalleled experience for our audience. The MCR is the muscle from all our projects allowing our creative team to imagine bigger, better and more spectacular shows.</p>
+            <p> agency</p>
+          </div>
+          <div className="fixed-animated-container">
+            {/* <div className="fixed-animated-container" style={screenWidth < 480 && { position: 'absolute', top: '50%' }}> */}
+            <div className="why-us-container" >
+              <div className="intro">
+                <p>We are the architects of exceptional sports & music encounters worldwide, with a primary emphasis in Europe and Middle East from our Head Quarters in Dubai, Riyadh and Brussels.</p>
+              </div>
+              <div className="main-text">
+                <div>
+                  <p>Where technology meets creativity. That is what we provide to our clients and partners through the carefully crafted Master Control Room tailor made for each project. Constant innovation is our most important pursuit: we strive to offer our clients the best program using the newest technologies available on market.</p>
+                </div>
+                <div>
+                  <p>Our Master Control Room allows us to coordinate every aspect of large-scale shows, including audio control, video content, lighting, cast management and live broadcast. This integration in the one and only MCR allows everyone to access the necessary information and instructions to deliver a flawless, distinctive, and unparalleled experience for our audience. The MCR is the muscle from all our projects allowing our creative team to imagine bigger, better and more spectacular shows.</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        {/* <div className="subheaders">
+          {/* <div className="subheaders">
           <div>
             <p className='subheader'>Our approach</p>
             <div className='strict-width'>
@@ -151,6 +154,7 @@ export default function whyUs({ data }) {
             </div>
           </div>
         </div> */}
+        </div>
         <Credits />
       </div>
     </>

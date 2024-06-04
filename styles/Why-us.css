@@ -89,6 +89,14 @@ p {
 }
 
 @media only screen and (min-width: 480px) {
+    .why-us-page {
+        display: flex;
+        flex-direction: column;
+        /* This will push the credits to the bottom */
+        justify-content: space-between;
+        min-height: 100dvh;
+    }
+
     .animated-line {
         margin: 100px 0 50px;
     }
