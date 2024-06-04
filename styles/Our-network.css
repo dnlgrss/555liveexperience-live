@@ -44,4 +44,16 @@
     .our-network-container {
         max-width: auto;
     }
+
+    .network-intro-p-width {
+        width: 43%;
+    }
+
+    .join-us-width {
+        width: 85%;
+    }
+
+    .inner-grid-width {
+        width: 90%;
+    }
 }
