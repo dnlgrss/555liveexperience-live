@@ -25,7 +25,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: echo "${{ secrets.FIVE_LIVE_SECRETS }}" > .env
+    - run: echo "${{ secrets.FIVE_SECRETS }}" > .env
     - run: npm i
     - run: CI=false npm run build
     - run: pm2 restart 555liveexperience.com_live

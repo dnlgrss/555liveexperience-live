@@ -121,12 +121,11 @@ export default function Home({ data }) {
         <VimeoVideo
           verticalVideoUrl="https://player.vimeo.com/video/953510946?"
           horizontalVideoUrl="https://player.vimeo.com/video/953511893?"
-          // verticalVideoUrl="https://player.vimeo.com/video/925511156?"
-          // horizontalVideoUrl="https://player.vimeo.com/video/925515575?"
           isHome={true}
         />
       </div>
       <div className="circle-quote">
+        {/* <div className="circle-quote" style={{ marginTop: '200%' }}> */}
         <Image src={CircleQuote} alt='Positive impact on your live experience' />
       </div>
       <Credits />
