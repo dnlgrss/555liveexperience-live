@@ -79,9 +79,9 @@ export default function contacts({ data }) {
             </div>
             <div className="social-area">
               <p className='follow-us-strict'>Follow us</p>
-              <a href="https://www.linkedin.com/company/555-live-events/" className="social">Linkedin</a>
-              <a href="https://www.instagram.com/555.live/" className="social">Instagram</a>
-              <a href="https://vimeo.com/user214578179" className="social">Vimeo</a>
+              <a href="https://www.linkedin.com/company/555-live-events/" className="social" style={{ width: '70px' }}>Linkedin</a>
+              <a href="https://www.instagram.com/555.live/" style={{ width: '85px' }} className="social">Instagram</a>
+              <a href="https://vimeo.com/user214578179" style={{ width: '60px' }} className="social">Vimeo</a>
             </div>
           </div>
         </div>
