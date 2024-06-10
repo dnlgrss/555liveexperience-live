@@ -146,7 +146,7 @@ export default function ourNetwork({ data }) {
                 <div className='inner-grid'>
                   <p className='subheader' style={{ marginTop: '40px', marginBottom: '0' }}>The Happiness Program</p>
                   <div className='inner-grid-width'>
-                    <p>Born from a successful collaboration among various parties, the Happiness Program continues to elevate the VIP Paddock Tour Experience for a select group of superfans, the best ambassadors, the most loyal, the hardcore fans who deserv to be rewarded for their unconditional passion.</p>
+                    <p>Born from a successful collaboration among various parties, the Happiness Program continues to elevate the VIP Paddock Tour Experience for a select group of superfans, the best ambassadors, the most loyal, the hardcore fans who deserve to be rewarded for their unconditional passion.</p>
                     <p>Originally designed for the Formula 1 superfans, this exclusive experience has now been extended to other events, including football events and music festivals. Emotions run high as superfans enter the Paddock, the locker rooms of the Saudi football team, or the backstage area of a famous DJ set at Tomorrowland, meeting the pilots, mechanics, technicians, and superstars who bring the magic to life. Every moment is captured by the 555 camera crew, while our Master Control Room ensures this enchanting and emotional experience is live fed on screens throughout the venue. This extraordinary opportunity leaves a lasting impact and is a privilege reserved for the most dedicated superfans.</p>
                   </div>
                 </div>

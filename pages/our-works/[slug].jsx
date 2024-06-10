@@ -19,7 +19,7 @@ import RelatedProject from '@/components/UI/RelatedProject';
 
 export const getServerSideProps = async ({ params }) => {
     const { slug } = params
-    console.log(slug);
+    console.log(`Fetching data for slug: ${slug}`); // Add this line for debugging
     const GET_PAGE = gql`
     query Event($id: ID!) {
         work(id: $id, idType: SLUG) {
@@ -135,28 +135,38 @@ export const getServerSideProps = async ({ params }) => {
         }
     }
   `
+    try {
+        const res = await client.query({
+            query: GET_PAGE,
+            variables: {
+                id: slug
+            }
+        })
+        console.log(`Data fetched successfully for slug: ${slug}`, res.data); // Add this line for debugging
 
-    const res = await client.query({
-        query: GET_PAGE,
-        variables: {
-            id: slug
+        if (!res?.data?.work?.works) {
+            return {
+                redirect: {
+                    destination: '/',
+                    permanent: false,
+                },
+            }
         }
-    })
 
-    if (!res?.data?.work?.works) {
+        const data = res?.data
+
         return {
-            redirect: {
-                destination: '/',
-                permanent: false,
-            },
+            props: {
+                data
+            }
         }
-    }
-
-    const data = res?.data
-
-    return {
-        props: {
-            data
+    } catch (error) {
+        console.error(`Error fetching data for slug: ${slug}`, error); // Add this line for debugging
+        return {
+            props: {
+                data: null,
+                error: 'Failed to fetch data',
+            },
         }
     }
 }

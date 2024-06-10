@@ -39,6 +39,7 @@
     opacity: 0.6;
 }
 
+
 .work-label {
     opacity: 1 !important;
 }
@@ -102,7 +103,7 @@
 
 /* Accordion */
 .accordion-item {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgb(204, 204, 204, 1);
     margin: 10px 10px 10px 0;
     margin-bottom: 5px;
     padding-bottom: 10px;

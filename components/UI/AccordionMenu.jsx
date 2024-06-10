@@ -45,7 +45,7 @@ const AccordionMenu = ({ previousWorks }) => {
     return (
         <div>
             {previousWorks.map(event => (
-                <div key={event.id} className="accordion-item" style={{ opacity: openItemId === event.id ? 1 : 0.6 }}>
+                <div key={event.id} className="accordion-item" style={{ opacity: openItemId === event.id ? 1 : 0.6, borderBottom: openItemId === event.id && '1px solid rgb(204, 204, 204, 0.6)' }}>
                     <div className={`accordion-title ${hasExtraData(event.previousWorks) ? '' : 'no-linker'}`} onClick={() => hasExtraData(event.previousWorks) && toggleItem(event.id)}>
                         {event.previousWorks.title}
                         <div>
