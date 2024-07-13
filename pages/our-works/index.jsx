@@ -16,6 +16,8 @@ import { gql } from '@apollo/client';
 import parse from 'html-react-parser';
 import Header from '@/components/Layout/Header';
 import Credits from '@/components/Layout/Credits';
+// Helper
+import { reorderWorks } from '@/helpers/works';
 
 export const getServerSideProps = async () => {
     // Fetching SEO page
@@ -78,6 +80,10 @@ export default function ourWorks({ data }) {
     const seo = data?.page?.seo
     const works = data.works.nodes
     const clients = data?.clients?.nodes
+
+    // Reorder works to place "Happiness Program" at the end
+    const reorderedWorks = reorderWorks(works);
+
     // State to store screen width
     const [screenWidth, setScreenWidth] = useState(null);
 
@@ -114,7 +120,7 @@ export default function ourWorks({ data }) {
                     <h1 className='network-h1'>Our Works</h1>
                     <div className="works-list">
                         {
-                            works.map((single) =>
+                            reorderedWorks.map((single) =>
                                 <Suspense fallback={<Loader />} key={single.id}>
                                     <Work single={single} slug={data.page.slug} />
                                 </Suspense>
