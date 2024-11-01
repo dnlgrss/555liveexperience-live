@@ -129,8 +129,8 @@ export default function Home({ data }) {
         height: '100dvh', marginTop: `-111px`,
       } : { height: '100vh' }}> */}
       <div className='offsettop' style={{
-        width: '100vw',
-        height: '100vh',
+        width: '100dvw',
+        height: '100dvh',
         overflow: 'hidden',
         // position: 'relative'
         position: `${screenWidth < 480 ? 'unset' : 'relative'}`
