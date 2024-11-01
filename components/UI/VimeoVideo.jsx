@@ -105,8 +105,11 @@ const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isAccordion = false,
                     position: 'absolute',
                     width: '100%',
                     height: '100%',
-                    top: '0',
-                    left: '0',
+                    // top: '0',
+                    // left: '0',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
                     border: '0',
                     // marginTop: `${screenWidth < 480 && '-111px'}`,
                     // overflow: 'hidden',
@@ -115,7 +118,6 @@ const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isAccordion = false,
                 }}>
                     {/* <div style={{ padding: '56.25% 0 0 0', position: 'relative', maxHeight: '100dvh', margin: `${marginWork()}`, width: 'auto', objectFit: 'cover' }}> */}
                     <iframe
-                        src={`${videoUrl}?autoplay=1&loop=1&muted=1&controls=0&sidedock=0&title=0`}
                         style={{
                             position: 'absolute',
                             top: '0',
@@ -125,7 +127,21 @@ const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isAccordion = false,
                             border: '0',
                             padding: '0',
                             objectFit: 'cover', // Fills the container
-                        }}
+                        }} src={`${videoUrl}?autoplay=1&loop=1&muted=1&controls=0&sidedock=0&title=0`}
+
+                        // style={{
+                        //     position: 'absolute',
+                        //     // top: '0',
+                        //     // left: '0',
+                        //     top: '50%',
+                        //     left: '50%',
+                        //     transform: 'translate(-50%, -50%)',
+                        //     minWidth: '100%',
+                        //     minHeight: '100%',
+                        //     border: '0',
+                        //     padding: '0',
+                        //     objectFit: 'cover', // Fills the container
+                        // }}
                         allowFullScreen
                         allow='autoplay'
                     ></iframe>
