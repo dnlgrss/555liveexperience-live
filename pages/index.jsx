@@ -132,8 +132,8 @@ export default function Home({ data }) {
         width: '100vw',
         height: '100vh',
         overflow: 'hidden',
-        // position: 'relative'
-        position: `${screenWidth < 480 ? 'unset' : 'relative'}`
+        position: 'relative'
+        // position: `${screenWidth < 480 ? 'unset' : 'relative'}`
         // HERE MOBILE NEEDS NO POSITION:RELATIVE
         // DESKTOP DOES NEED POSITION:RELATIVE
       }}>
