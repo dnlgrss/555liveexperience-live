@@ -107,7 +107,7 @@ const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isAccordion = false,
                     height: '100%',
                     top: '0',
                     left: '0',
-                    marginTop: `${screenWidth < 480 && '-111px'}`,
+                    // marginTop: `${screenWidth < 480 && '-111px'}`,
                     // overflow: 'hidden',
                     objectFit: 'cover',
                     zIndex: 1 // Keeps the video behind other content
