@@ -54,38 +54,40 @@ export default function Home({ data }) {
   const [showScrollDown, setShowScrollDown] = useState(true);
   // State to store screen width
   const [screenWidth, setScreenWidth] = useState(null);
-
-  useEffect(() => {
-    // Set initial value
-    setScreenWidth(window.innerWidth);
-
-    // Handler to call on window resize
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth);
-    };
+  const [offsetTop, setOffsetTop] = useState(0);
 
 
-    // Add event listener
-    window.addEventListener('resize', handleResize);
+  // It handles the start and stop autoplay on  scroll
+  // useEffect(() => {
+  //   // Set initial value
+  //   setScreenWidth(window.innerWidth);
 
-    // Remove event listener on cleanup
-    return () => window.removeEventListener('resize', handleResize);
-  }, []); // Empty array ensures that effect runs only on mount and unmount
+  //   // Handler to call on window resize
+  //   const handleResize = () => {
+  //     setScreenWidth(window.innerWidth);
+  //   };
 
-  const scrollDown = () => {
-    window.scrollBy({ top: window.innerHeight, left: 0, behavior: 'smooth' });
-    // window.scrollBy({ top: '100vh', left: 0, behavior: 'smooth' });
-  };
 
-  const handleScroll = () => {
-    setShowScrollDown(window.scrollY === 0);
-  };
+  //   // Add event listener
+  //   window.addEventListener('resize', handleResize);
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  //   // Remove event listener on cleanup
+  //   return () => window.removeEventListener('resize', handleResize);
+  // }, []); // Empty array ensures that effect runs only on mount and unmount
 
+  // const scrollDown = () => {
+  //   window.scrollBy({ top: window.innerHeight, left: 0, behavior: 'smooth' });
+  //   // window.scrollBy({ top: '100vh', left: 0, behavior: 'smooth' });
+  // };
+
+  // const handleScroll = () => {
+  //   setShowScrollDown(window.scrollY === 0);
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
 
   return (
@@ -96,13 +98,13 @@ export default function Home({ data }) {
         <link rel="icon" href="/favicon.ico" />
         {parse(seo.fullHead)}
       </Head>
-      <Header />
+      <Header isHome={true} />
+      {/*
       <div className='frontpage'>
         <div className="container">
           {screenWidth < 480
             ?
             <>
-              {/* <p className='quote' style={{ fontFamily: "'Marchellia', sans-serif", marginBottom: '56px' }}>“If everything seems under control, you’re not going fast enough.”</p> */}
               <Image src={QuoteMobile} alt='555 Live Experience - Event Management Services' className='quote' />
             </>
             :
@@ -117,13 +119,31 @@ export default function Home({ data }) {
           </div>
         )}
       </div>
-      <div >
+      */}
+
+      {/* <div> */}
+      {/* Version not transparent menu bar. Watch for destop not yet implemented, video not showing  */}
+      {/* <div style={screenWidth < 480 ? { width: '100dvw', height: 'calc(100dvh - 82px)' } : { width: '100dvw', height: 'calc(100dvh - 82px)' }}> */}
+      {/* Altra V2  */}
+      {/* <div className='offsettop' style={screenWidth < 480 ? {
+        height: '100dvh', marginTop: `-111px`,
+      } : { height: '100vh' }}> */}
+      <div className='offsettop' style={{
+        width: '100vw',
+        height: '100vh',
+        overflow: 'hidden',
+        // position: 'relative'
+        position: `${screenWidth < 480 ? 'unset' : 'relative'}`
+        // HERE MOBILE NEEDS NO POSITION:RELATIVE
+        // DESKTOP DOES NEED POSITION:RELATIVE
+      }}>
         <VimeoVideo
-          verticalVideoUrl="https://player.vimeo.com/video/953510946?"
-          horizontalVideoUrl="https://player.vimeo.com/video/953511893?"
+          verticalVideoUrl="https://player.vimeo.com/video/953510946"
+          horizontalVideoUrl="https://player.vimeo.com/video/953511893"
           isHome={true}
         />
       </div>
+      {/* </div> */}
       <div className="circle-quote">
         {/* <div className="circle-quote" style={{ marginTop: '200%' }}> */}
         <Image src={CircleQuote} alt='Positive impact on your live experience' />

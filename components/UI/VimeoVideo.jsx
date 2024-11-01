@@ -54,30 +54,30 @@ const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isAccordion = false,
     }, []); // Empty array ensures that effect runs only on mount and unmount
 
     //Autoplay function
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsPlaying(true);
-                } else {
-                    setIsPlaying(false);
-                }
-            },
-            {
-                threshold: 0.5,
-            }
-        );
+    // useEffect(() => {
+    //     const observer = new IntersectionObserver(
+    //         ([entry]) => {
+    //             if (entry.isIntersecting) {
+    //                 setIsPlaying(true);
+    //             } else {
+    //                 setIsPlaying(false);
+    //             }
+    //         },
+    //         {
+    //             threshold: 0.5,
+    //         }
+    //     );
 
-        if (videoRef.current) {
-            observer.observe(videoRef.current);
-        }
+    //     if (videoRef.current) {
+    //         observer.observe(videoRef.current);
+    //     }
 
-        return () => {
-            if (videoRef.current) {
-                observer.unobserve(videoRef.current);
-            }
-        };
-    }, [videoRef]);
+    //     return () => {
+    //         if (videoRef.current) {
+    //             observer.unobserve(videoRef.current);
+    //         }
+    //     };
+    // }, [videoRef]);
 
     const videoUrl = screenWidth > 480 ? horizontalVideoUrl : verticalVideoUrl;
     const marginWork = () => {
@@ -91,35 +91,63 @@ const VimeoVideo = ({ horizontalVideoUrl, verticalVideoUrl, isAccordion = false,
         const autoplay = isPlaying ? 'autoplay=1' : 'autoplay=0';
         if (isHome) {
             return (
-                // <div ref={videoRef} style={{ padding: '56.25% 0 0 0', position: 'relative', minHeight: `${screenWidth < 480 ? '103lvh' : 'calc(100dvh - 65px)'}`, maxHeight: `${screenWidth < 480 ? '103lvh' : 'calc(100dvh - 65px)'}`, margin: '0 auto', width: `${screenWidth < 480 ? 'calc(100lvw - 36px)' : 'calc(100dvw - 32px)'}` }}>
-                // <div ref={videoRef} style={{ padding: '56.25% 0 0 0', position: 'fixed', top: `${viewportHeight}px`, left: '16px', minHeight: `${screenWidth < 480 ? 'calc(var(--vh, 1vh) * 100)' : 'calc(100dvh - 65px)'}`, maxHeight: `${screenWidth < 480 ? 'calc(var(--vh, 1vh) * 100)' : 'calc(100dvh - 65px)'}`, margin: '0 auto', width: `${screenWidth < 480 ? 'calc(100lvw)' : 'calc(100dvw - 32px)'}` }}>
-                <div ref={videoRef} style={{ padding: '56.25% 0 0 0', position: 'relative', minHeight: `${screenWidth < 480 ? 'calc(var(--vh, 1vh) * 100)' : 'calc(100dvh - 65px)'}`, maxHeight: `${screenWidth < 480 ? 'calc(var(--vh, 1vh) * 100)' : 'calc(100dvh - 65px)'}`, margin: '0 auto', width: `${screenWidth < 480 ? 'calc(100lvw)' : 'calc(100dvw - 32px)'}` }}>
-                    {/* <div ref={videoRef} style={{ padding: '56.25% 0 0 0', position: 'relative', minHeight: `${screenWidth < 480 ? 'calc(var(--vh, 1vh) * 100)' : 'calc(100dvh - 65px)'}`, maxHeight: `${screenWidth < 480 ? 'calc(var(--vh, 1vh) * 100)' : 'calc(100dvh - 65px)'}`, margin: '0 auto', width: `${screenWidth < 480 ? 'calc(100lvw)' : 'calc(100dvw - 32px)'}` }}> */}
-                    {/* <div ref={videoRef} style={{ padding: '56.25% 0 0 0', position: 'relative', height: `${screenWidth < 480 ? 'calc(100dvh - 125px)' : 'calc(100dvh - 65px)'}`, margin: '0 auto', width: `${screenWidth < 480 ? '100%' : 'calc(100dvw - 32px)'}` }}> */}
+                // <div ref={videoRef} style={{
+                //     padding: '56.25% 0 0 0',
+                //     position: 'relative',
+                //     maxHeight: `${screenWidth < 480 ? '100vh' : '100dvh'}`,
+                //     margin: `0`,
+                //     width: `${screenWidth < 480 ? '100vw' : 'auto'}`,
+                //     objectFit: 'fill'
+                // }}>
+                // ref={videoRef} for autoplay function
+                <div style={{
+                    padding: '56.25% 0 0 0',
+                    position: 'absolute',
+                    width: '100%',
+                    height: '100%',
+                    top: '0',
+                    left: '0',
+                    marginTop: `${screenWidth < 480 && '-111px'}`,
+                    // overflow: 'hidden',
+                    objectFit: 'cover',
+                    zIndex: 1 // Keeps the video behind other content
+                }}>
+                    {/* <div style={{ padding: '56.25% 0 0 0', position: 'relative', maxHeight: '100dvh', margin: `${marginWork()}`, width: 'auto', objectFit: 'cover' }}> */}
                     <iframe
-                        src={`${videoUrl}${autoplay}&muted=1&loop=1&controls=0`}
-                        // src={`${videoUrl}autoplay=1&loop=1&muted=0&controls=1&sidedock=0&title=0&byline=0&fullscreen=false&pip=0`}
+                        src={`${videoUrl}?autoplay=1&loop=1&muted=1&controls=0&sidedock=0&title=0`}
                         style={{
                             position: 'absolute',
                             top: '0',
-                            left: '16px',
-                            // width: `${screenWidth < 480 ? 'calc(90lvw)' : 'calc(100dvw - 32px)'}`,
-                            width: `${screenWidth < 480 ? 'calc(100lvw - 32px)' : 'calc(100dvw - 32px)'}`,
-                            // dvh is jumping window.height shoudn't but hard to use outside useEffect
-                            // height: 'auto',
-                            minHeight: `${screenWidth < 480 ? '100%' : 'calc(100lvh - 65px)'}`,
-                            maxHeight: `${screenWidth < 480 ? '100%' : 'calc(100lvh - 65px)'}`,
-                            // minHeight: `${screenWidth < 480 ? viewportHeight + 'px' : 'calc(100lvh - 65px)'}`,
-                            // maxHeight: `${screenWidth < 480 ? viewportHeight + 'px' : 'calc(100lvh - 65px)'}`,
-                            // height: `${screenWidth < 480 ? 'calc(100dvh - 125px)' : 'calc(100dvh - 65px)'}`,
+                            left: '0',
+                            minWidth: '100%',
+                            minHeight: '100%',
                             border: '0',
-                            // margin: '0 auto'
+                            padding: '0',
+                            objectFit: 'cover', // Fills the container
                         }}
-                        title="555 Live Experience"
                         allowFullScreen
                         allow='autoplay'
                     ></iframe>
                 </div>
+
+
+
+                //  <div ref={videoRef} style={{ padding: '56.25% 0 0 0', position: 'relative', minHeight: `${screenWidth < 480 ? 'calc(var(--vh, 1vh) * 100)' : 'calc(100dvh - 65px)'}`, maxHeight: `${screenWidth < 480 ? 'calc(var(--vh, 1vh) * 100)' : 'calc(100dvh - 65px)'}`, margin: '0 auto', width: `${screenWidth < 480 ? 'calc(100lvw)' : 'calc(100dvw - 32px)'}` }}>
+                //     <iframe
+                //         src={`${videoUrl}?${autoplay}&muted=1loop=1&controls=0`}
+                //         style={{
+                //             position: 'absolute',
+                //             top: '0',
+                //             left: '0',
+                //             width: '100%',
+                //             height: '100%',
+                //             border: '0',
+                //         }}
+                //         title="555 Live Experience"
+                //         allowFullScreen
+                //     ></iframe>
+                // </div>
+
 
                 /*
                                 <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>

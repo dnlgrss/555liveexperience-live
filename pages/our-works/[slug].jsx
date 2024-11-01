@@ -261,6 +261,8 @@ const single = ({ data }) => {
                         verticalVideoUrl={transformVimeoLink(works.video)}
                         horizontalVideoUrl={transformVimeoLink(works.video)}
                     />
+                    {console.log(works.video)}
+                    {console.log(transformVimeoLink(works.video))}
                     <h1 className='working-title'>
                         {works.title}
                     </h1>
