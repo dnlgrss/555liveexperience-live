@@ -58,22 +58,22 @@ export default function Home({ data }) {
 
 
   // It handles the start and stop autoplay on  scroll
-  // useEffect(() => {
-  //   // Set initial value
-  //   setScreenWidth(window.innerWidth);
+  useEffect(() => {
+    // Set initial value
+    setScreenWidth(window.innerWidth);
 
-  //   // Handler to call on window resize
-  //   const handleResize = () => {
-  //     setScreenWidth(window.innerWidth);
-  //   };
+    // Handler to call on window resize
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
 
 
-  //   // Add event listener
-  //   window.addEventListener('resize', handleResize);
+    // Add event listener
+    window.addEventListener('resize', handleResize);
 
-  //   // Remove event listener on cleanup
-  //   return () => window.removeEventListener('resize', handleResize);
-  // }, []); // Empty array ensures that effect runs only on mount and unmount
+    // Remove event listener on cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []); // Empty array ensures that effect runs only on mount and unmount
 
   // const scrollDown = () => {
   //   window.scrollBy({ top: window.innerHeight, left: 0, behavior: 'smooth' });
@@ -132,8 +132,8 @@ export default function Home({ data }) {
         width: '100vw',
         height: '100vh',
         overflow: 'hidden',
-        position: 'relative'
-        // position: `${screenWidth < 480 ? 'unset' : 'relative'}`
+        // position: 'relative'
+        position: `${screenWidth < 480 ? 'unset' : 'relative'}`
         // HERE MOBILE NEEDS NO POSITION:RELATIVE
         // DESKTOP DOES NEED POSITION:RELATIVE
       }}>
