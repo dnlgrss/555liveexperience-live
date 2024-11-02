@@ -37,7 +37,7 @@ const Header = ({ isHome }) => {
             <Hamburger onClick={toggleSidebar} isOpen={isOpen} />
             <div className="header transparent" style={{
                 background: `${isHome && 'transparent'}`,
-                position: 'fixed',
+                position: `${isHome && 'fixed'}`,
             }}>
                 <Icon />
                 <DesktopMenu /> {/* Include the DesktopMenu component */}
