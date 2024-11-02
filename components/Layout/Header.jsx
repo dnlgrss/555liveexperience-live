@@ -37,7 +37,8 @@ const Header = ({ isHome }) => {
             <Hamburger onClick={toggleSidebar} isOpen={isOpen} />
             <div className="header transparent" style={{
                 background: `${isHome && 'transparent'}`,
-                position: `${isHome && 'fixed'}`,
+                //Video full screen header overlay
+                // position: `${isHome && 'fixed'}`,
             }}>
                 <Icon />
                 <DesktopMenu /> {/* Include the DesktopMenu component */}

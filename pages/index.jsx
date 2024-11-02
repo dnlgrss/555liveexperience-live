@@ -139,7 +139,9 @@ export default function Home({ data }) {
       }}>
         <VimeoVideo
           verticalVideoUrl="https://player.vimeo.com/video/953510946"
-          horizontalVideoUrl="https://player.vimeo.com/video/953511893"
+          //https://player.vimeo.com/video/1025725213
+          horizontalVideoUrl="https://player.vimeo.com/video/1025725213"
+          // horizontalVideoUrl="https://player.vimeo.com/video/953511893"
           isHome={true}
         />
       </div>
