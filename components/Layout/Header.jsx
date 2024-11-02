@@ -5,7 +5,7 @@ import Hamburger from '@/components/UI/Hamburger';
 import Sidebar from '@/components/Layout/Sidebar';
 import DesktopMenu from './DesktopMenu';
 
-const Header = () => {
+const Header = ({ isHome }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleSidebar = () => {
@@ -35,7 +35,11 @@ const Header = () => {
             <div className={`overlay ${isOpen ? 'active' : ''}`} onClick={toggleSidebar}></div>
             <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
             <Hamburger onClick={toggleSidebar} isOpen={isOpen} />
-            <div className="header">
+            <div className="header transparent" style={{
+                background: `${isHome && 'transparent'}`,
+                //Video full screen header overlay
+                // position: `${isHome && 'fixed'}`,
+            }}>
                 <Icon />
                 <DesktopMenu /> {/* Include the DesktopMenu component */}
             </div>
