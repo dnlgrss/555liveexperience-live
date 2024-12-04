@@ -41,7 +41,7 @@
     position: absolute;
     top: 10px;
     /* Adjust spacing from the top */
-    right: 5px;
+    right: 10px;
     /* Adjust spacing from the right */
     width: 100px;
     height: 55px;
@@ -114,14 +114,14 @@
         overflow: hidden;
     }
 
-    .work-box-image img:hover {
+    .work-box-image-img:hover {
         transform: scale(110%);
     }
 
     .badge {
         top: 0px;
         /* Adjust spacing from the top */
-        right: 7px;
+        right: 10px;
         width: 150px;
         height: 100px;
     }

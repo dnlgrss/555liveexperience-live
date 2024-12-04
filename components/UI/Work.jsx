@@ -39,6 +39,7 @@ const Work = ({ single, slug }) => {
                         </div>
                     }
                     <Image
+                        className='work-box-image-img'
                         src={single.works.featuredImage.mediaItemUrl}
                         alt={single.works.featuredImage.altText}
                         fill={true}
