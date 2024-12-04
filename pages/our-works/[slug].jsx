@@ -24,6 +24,7 @@ export const getServerSideProps = async ({ params }) => {
     query Event($id: ID!) {
         work(id: $id, idType: SLUG) {
             works {
+                badge
                 video
                 hasVideo
                 headerPicture{
@@ -180,6 +181,9 @@ const single = ({ data }) => {
     const images = getImageData(works)
     // State to store screen width
     const [screenWidth, setScreenWidth] = useState(null);
+    // Handle image display
+    const [hideImage, setHideImage] = useState(false);
+
 
     useEffect(() => {
         const header = document.querySelector('.header'); // Adjust the selector as needed
@@ -261,8 +265,6 @@ const single = ({ data }) => {
                         verticalVideoUrl={transformVimeoLink(works.video)}
                         horizontalVideoUrl={transformVimeoLink(works.video)}
                     />
-                    {console.log(works.video)}
-                    {console.log(transformVimeoLink(works.video))}
                     <h1 className='working-title'>
                         {works.title}
                     </h1>
@@ -277,8 +279,36 @@ const single = ({ data }) => {
                 </div>
             }
             <div className='work-intro'>
-                <p>{works.intro}</p>
+                <div>
+                    <p>{works.intro}</p>
+                    {!!works.badge && !hideImage && screenWidth > 480 ? (
+                        <Image
+                            src={`/assets/img/badge/${screenWidth < 480 ? `${works.badge}_black` : `${works.badge}_white`}.svg`}
+                            alt={`Sporting Event Award Badge`}
+                            width={screenWidth < 480 ? 150 : 200} // Customize badge size
+                            height={screenWidth < 480 ? 150 : 200}
+                            // onLoadingComplete={() => setIsLoading(false)}
+                            onError={() => setHideImage(true)} // Hide loader on error as well
+                        />
+                    ) :
+                        null
+                    }
+                </div>
                 <p>{works.intro2}</p>
+            </div>
+            <div style={{ marginLeft: '16px' }}>
+                {!!works.badge && !hideImage && screenWidth < 480 ? (
+                    <Image
+                        src={`/assets/img/badge/${screenWidth < 480 ? `${works.badge}_black` : `${works.badge}_white`}.svg`}
+                        alt={`Sporting Event Award Badge`}
+                        width={screenWidth < 480 ? 150 : 200} // Customize badge size
+                        height={screenWidth < 480 ? 150 : 200}
+                        // onLoadingComplete={() => setIsLoading(false)}
+                        onError={() => setHideImage(true)} // Hide loader on error as well
+                    />
+                ) :
+                    null
+                }
             </div>
             <div className='work-labels'>
                 <div>

@@ -42,7 +42,7 @@ export const getStaticProps = async () => {
 export default function ourNetwork({ data }) {
   const { seo } = data
 
-  const words = ["professionals", "freelancers", "creatives", "technicians", "event experts", "performers/artist"];
+  const words = ["professionals", "freelancers", "creatives", "technicians", "event experts", "performers/artists"];
   // const words = ["EVENT EXPERTS", "TECHNICIANS", "PROFESSIONALS", "FREELANCERS", "CREATIVES"];
   // const [currentWord, setCurrentWord] = useState(words[0]);
   // const [animation, setAnimation] = useState(0);
