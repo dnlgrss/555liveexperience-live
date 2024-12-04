@@ -286,7 +286,7 @@ const single = ({ data }) => {
                             src={`/assets/img/badge/${screenWidth < 480 ? `${works.badge}_black` : `${works.badge}_white`}.svg`}
                             alt={`Sporting Event Award Badge`}
                             width={screenWidth < 480 ? 150 : 200} // Customize badge size
-                            height={screenWidth < 480 ? 150 : 200}
+                            height={screenWidth < 480 ? 55 : 110}
                             // onLoadingComplete={() => setIsLoading(false)}
                             onError={() => setHideImage(true)} // Hide loader on error as well
                         />
@@ -302,7 +302,7 @@ const single = ({ data }) => {
                         src={`/assets/img/badge/${screenWidth < 480 ? `${works.badge}_black` : `${works.badge}_white`}.svg`}
                         alt={`Sporting Event Award Badge`}
                         width={screenWidth < 480 ? 150 : 200} // Customize badge size
-                        height={screenWidth < 480 ? 150 : 200}
+                        height={screenWidth < 480 ? 82 : 55}
                         // onLoadingComplete={() => setIsLoading(false)}
                         onError={() => setHideImage(true)} // Hide loader on error as well
                     />

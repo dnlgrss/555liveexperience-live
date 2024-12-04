@@ -52,7 +52,7 @@ const Work = ({ single, slug }) => {
                                 src={`/assets/img/badge/${screenWidth < 480 ? `${single.works.badge}_white` : `${single.works.badge}_white`}.svg`}
                                 alt={`Sporting Event Award Badge`}
                                 width={screenWidth < 480 ? 150 : 150} // Customize badge size
-                                height={screenWidth < 480 ? 150 : 150}
+                                height={screenWidth < 480 ? 55 : 55}
                                 // onLoadingComplete={() => setIsLoading(false)}
                                 onError={() => setHideImage(true)} // Hide loader on error as well
                             />

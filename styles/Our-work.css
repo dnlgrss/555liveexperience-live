@@ -38,6 +38,10 @@
     opacity: 0.6;
 }
 
+.work-labels {
+    margin-top: 13px;
+}
+
 .work-labels p {
     margin: 0px 16px;
     opacity: 0.6;
