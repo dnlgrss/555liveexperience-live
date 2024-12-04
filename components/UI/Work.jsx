@@ -46,7 +46,6 @@ const Work = ({ single, slug }) => {
                         onError={() => setIsLoading(false)} // Hide loader on error as well
                     />
                     {/* Render badge image if badge exists */}
-                    {console.log(single.works.badge)}
                     {!!single.works.badge && !hideImage ? (
                         <div className="badge">
                             <Image
