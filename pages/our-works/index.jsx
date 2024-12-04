@@ -43,6 +43,7 @@ export const getServerSideProps = async () => {
                         altText
                         mediaItemUrl
                     }
+                    badge
                 }
             }
         }

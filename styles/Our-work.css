@@ -15,12 +15,16 @@
     line-height: 60px;
 }
 
+.work-intro div img {
+    margin-left: 16px;
+}
+
 .work-intro p:first-child {
     font-size: 24px;
     line-height: 32px;
 }
 
-.work-labels,
+/* .work-labels, */
 .accordion-labels {
     margin: 50px 0;
 }
@@ -174,6 +178,10 @@
 
     .work-intro p {
         font-size: 16px;
+        margin-left: 0;
+    }
+
+    .work-intro div img {
         margin-left: 0;
     }
 

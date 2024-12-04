@@ -15,9 +15,46 @@
     margin-bottom: 24px;
 }
 
-.work-box-image img {
-    position: relative !important;
+.work-box-image a {
+    height: 100%;
+    width: 100%;
+}
+
+.work-box-image {
+    position: relative;
+    /* For badge positioning */
+    width: 100%;
+    /* Full width */
+    aspect-ratio: 16 / 9;
+    /* Maintain a consistent aspect ratio */
+    overflow: hidden;
     transition: transform 0.3s ease-in-out;
+}
+
+.work-box-image img {
+    /* position: relative !important; */
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    /* Adjust spacing from the top */
+    right: 5px;
+    /* Adjust spacing from the right */
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+}
+
+.badge img {
+    object-fit: contain;
+    /* Ensure badge scales properly */
+    width: 100%;
+    /* Match badge container size */
+    height: 100%;
+    /* Match badge container size */
 }
 
 .selected-clients p {
@@ -77,8 +114,16 @@
         overflow: hidden;
     }
 
-    .work-box-image a img:hover {
+    .work-box-image img:hover {
         transform: scale(110%);
+    }
+
+    .badge {
+        top: 0px;
+        /* Adjust spacing from the top */
+        right: 7px;
+        width: 150px;
+        height: 150px;
     }
 
     .selected-clients p {

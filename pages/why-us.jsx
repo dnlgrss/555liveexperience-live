@@ -43,7 +43,7 @@ export const getStaticProps = async () => {
 export default function whyUs({ data }) {
   const { seo } = data
 
-  const words = ["a fan-first", "a happiness-first", "a creative", "a event production", "a global", "a technology-first"];
+  const words = ["an award-winning", "a event production", "a creative", "a global", "a fan-first", "a happiness-first", "a technology-first"];
   // const words = ["AN HAPPINESS-FIRST", "A BREAKING BOUNDARIES", "A CREATIVE", "A PRODUCTION EVENT"];
   // const [currentWord, setCurrentWord] = useState(words[0]);
   // const [animation, setAnimation] = useState(0);
