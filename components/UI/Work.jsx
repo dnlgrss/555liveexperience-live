@@ -34,7 +34,7 @@ const Work = ({ single, slug }) => {
                 <Link href={`/${slug}/${single.slug}`}>
                     {/* Show loader when image is loading */}
                     {isLoading &&
-                        <div className="loader-container" style={{ width: '100%', height: '450px' }}>
+                        <div className="loader-container" style={{ width: '100%', height: '100%' }}>
                             <Loader />
                         </div>
                     }
